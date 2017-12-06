@@ -1,0 +1,25 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="troubleshoot" audience="platform" href="/docs/troubleshoot/troubleshoot.html"}
+トラブルシューティング
+
+	{: .navgroup id="help"}
+	troubleshoot.md
+	../support/
+	../debug/
+	ts_accessing.md
+	ts_apps.md
+	ts_accounts.md
+	ts_runtimes.md
+	ts_services.md
+	bxnui.md
+	
+	
+	{: .topicgroup}
+	関連リンク
+            [Client Success Portal へようこそ](https://support.ibmcloud.com)
+	    [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html)
+	    [cf コマンド・ツールのインストール](/docs/starters/install_cli.html)
+	    [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+{: .navgroup-end}

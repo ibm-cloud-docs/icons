@@ -1,0 +1,35 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-pricing" audience="platform" href="/docs/pricing/index.html"}
+Gestione della fatturazione e dell'utilizzo
+    
+    {: .navgroup id="learn"}
+    index.md
+    standard_account.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Prezzi    
+        free.md
+        billable.md
+        how_charged.md
+        feature-codes.md
+        estimating_costs.md
+        scenario.md
+            
+    changing_plan.md
+            
+    {: .topicgroup}
+    Utilizzo
+        viewing_usage.md
+        manage_billing.md
+        
+    linking_accounts.md
+    accessing_infrastructure.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="help"}
+    account_faq.md
+    {: .navgroup-end}

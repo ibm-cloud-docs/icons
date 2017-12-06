@@ -1,0 +1,13 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-monitor-log" audience="platform" href="/docs/monitor_log/monitoringandlogging.html"}
+モニターとロギング
+
+    {: .navgroup id="learn"}
+    monitoringandlogging.md
+    logging/dedicated/logging_local_dedicated.md
+        
+    {: .navgroup-end}
+    
+

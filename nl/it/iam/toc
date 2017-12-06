@@ -1,0 +1,26 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-iam" audience="platform" href="/docs/iam/iamusermanage.html"}
+Gestione di identità e accesso
+
+    {: .navgroup id="learn"}
+    users_roles.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    iamuserinv.md
+    iamusermanage.md
+
+    {: .topicgroup}
+    Gestione dei servizi
+        serviceid.md
+        serviceidaccess.md
+    
+    {: .topicgroup}
+    Chiavi API
+        apikeys.md
+        userid_keys.md
+        serviceid_keys.md
+    {: .navgroup-end}
+    

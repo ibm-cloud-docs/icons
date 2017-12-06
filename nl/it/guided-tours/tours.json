@@ -1,0 +1,67 @@
+[
+  {
+    "id": "WhatsNewRGandSearch",
+    "tourCriteria": {
+      "urlRegex": ".*",
+      "newUser": "false"
+    },
+    "tourPanels": [
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/introducing_cloud_brand.gif",
+        "title": "Novità",
+        "body": "Bluemix è ora IBM Cloud. Oltre al nuovo nome, siamo lieti di annunciarti alcuni grandi miglioramenti che ti offrono maggiore controllo e flessibilità. Per restare al passo con gli aggiornamenti in corso, vai a Supporto > Novità."
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/global_dashboard.gif",
+        "title": "Introduzione ai gruppi di risorse",
+        "body": "Puoi utilizzare gruppi personalizzabili per organizzare e proteggere le tue risorse.",
+        "ctaText": "Ulteriori informazioni.",
+        "ctaURL": "/docs/admin/resourcegroups.html"
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/global_search.gif",
+        "title": "Trova tutto ciò che ti serve",
+        "body": "Puoi ora eseguire ricerche in tutte le tue organizzazioni, regioni e gruppi di risorse.",
+        "ctaText": "Ulteriori informazioni.",
+        "ctaURL": "/docs/overview/ui.html"
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/filters.gif",
+        "title": "Trova tutto in solo posto",
+        "body": "Vuoi una visione globale di tutte le tue risorse? Adesso, puoi andare al dashboard e filtrare ciò che è importante per te.",
+        "ctaText": "Ulteriori informazioni.",
+        "ctaURL": "/docs/overview/ui.html"
+      }
+    ]
+  },
+  {
+    "id": "NewUserIntro",
+    "tourCriteria": {
+      "urlRegex": ".*",
+      "newUser": "true",
+      "suppressTours": [
+        "WhatsNewRGandSearch"
+      ]
+    },
+    "tourPanels": [
+      {
+        "image": "/docs/api/content/guided-tours/images/welcome1.png",
+        "title": "Benvenuto in IBM Cloud",
+        "body": "Siamo lieti che tu sia qui! Ora che il tuo account è configurato con un gruppo di risorse, un'organizzazione e uno spazio già creati per tuo conto, sei pronto per iniziare ad utilizzare i tuoi progetti."
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/welcome1.png",
+        "title": "Cosa desideri creare?",
+        "body": "Ti forniamo un'ampia gamma di servizi che puoi utilizzare per la creazione di blocchi per eseguire le tue applicazioni. Utilizza l'icona del menu per aprire la navigazione e avviare l'esplorazione di IBM Cloud."
+      },
+      {
+        "image": "/docs/api/content/guided-tours/images/whatsnew/all-resources-wide.png",
+        "title": "Trova tutto in solo posto",
+        "body": "Vuoi una visione globale di tutte le tue risorse? Dopo aver iniziato la creazione, puoi andare al dashboard e filtrare ciò che è importante per te. ",
+        "ctaText": "Ulteriori informazioni.",
+        "ctaURL": "/docs/overview/ui.html"
+      }
+    ]
+  }
+]
+
