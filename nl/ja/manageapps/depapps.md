@@ -23,17 +23,16 @@ lastupdated: "2017-04-11"
 アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイする工程には、2 つの段階があります。アプリケーションをステージングする段階、およびアプリケーションを開始する段階です。
 
 Cloud Foundry は、新しいデフォルトのランタイム・アーキテクチャーである Diego をサポートします。Diego は、クラウド・プラットフォームのホスティングと構成のためのアプリケーション開発作業を強化する機能セットを提供します。
-このアーキテクチャー更新によって、Cloud Foundry プラットフォームの全体的な運用およびパフォーマンスが向上します。この新規アーキテクチャーは、いくつかのアプリケーション・コンテナー・テクノロジー (Garden や Windows など)、アプリケーション・コンテナーへの直接ログインを可能にする SSH パッケージ、およびその他の革新的な変更をサポートします。アーキテクチャーの最近のアップグレードについて詳しくは、[{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window} を参照してください。
-
+このアーキテクチャー更新によって、Cloud Foundry プラットフォームの全体的な運用およびパフォーマンスが向上します。この新規アーキテクチャーは、いくつかのアプリケーション・コンテナー・テクノロジー (Garden や Windows など)、アプリケーション・コンテナーへの直接ログインを可能にする SSH パッケージ、およびその他の革新的な変更をサポートします。アーキテクチャーの最近のアップグレードについて詳しくは、[{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}を参照してください。
 
 作成する新規アプリケーションはすべて Diego 上で実行されるため、DEA 上で実行する既存アプリケーションをこの新しい Diego アーキテクチャーへマイグレーションする必要があります。
 
-**注:** Cloud Foundry Diego アーキテクチャーは、すべての {{site.data.keyword.Bluemix_notm}} Public 地域環境に影響します。{{site.data.keyword.Bluemix_notm}} Dedicated 環境および {{site.data.keyword.Bluemix_notm}} Local 環境は、後日更新されます。
+**注:** Cloud Foundry Diego アーキテクチャーは、すべての {{site.data.keyword.Bluemix_notm}} Public 地域環境に影響します。{{site.data.keyword.Bluemix_notm}} Dedicated 環境および {{site.data.keyword.Bluemix_notm}} Private 環境は、後で更新されます。
 
 ### アプリケーションのステージング
 {: #diego}
 
-ステージング・フェーズでは、Diego はアプリケーション・コンテナーのオーケストレーションに関連するすべての局面に対処します。ユーザーがアプリをプッシュすると、Cloud Controller がステージング要求を Diego に送信し、Diego がアプリ・インスタンスの割り振りタスクを引き継ぎます。Diego バックエンドは、耐障害性が高く長期間の一貫性が保たれるようにアプリケーション・コンテナーを調整し、それによって、セルと呼ばれる一連の仮想マシン間で負荷のバランスを取ります。さらに、Diego は、ユーザーがアプリのログに確実にアクセスできるようにします。すべての Diego コンポーネントはクラスター化されるように設計されています。これは、さまざまなアベイラビリティー・ゾーンを作成できることを意味します。
+ステージング・フェーズでは、Diego はアプリケーション・コンテナーのオーケストレーションに対処します。ユーザーがアプリをプッシュすると、Cloud Controller がステージング要求を Diego に送信し、Diego がアプリ・インスタンスの割り振りタスクを引き継ぎます。Diego バックエンドは、耐障害性が高く長期間の一貫性が保たれるようにアプリケーション・コンテナーを調整し、それによって、セルと呼ばれる一連の仮想マシン間で負荷のバランスを取ります。さらに、Diego は、ユーザーがアプリのログに確実にアクセスできるようにします。すべての Diego コンポーネントはクラスター化されるように設計されています。これは、さまざまなアベイラビリティー・ゾーンを作成できることを意味します。
 
 アプリの正常性を検証するために、Diego は DEA に使用されていたものと同じ、ポート・ベースのチェックをサポートします。ただし、Diego は、将来有効にされる可能性のある URL ベースのヘルス・チェックのような一般的オプションをさらに設けられるようにも設計されています。
 
@@ -47,7 +46,7 @@ Cloud Foundry は、新しいデフォルトのランタイム・アーキテク
   $ cf push APPLICATION_NAME
   ```
 
-**cf push** コマンドについて詳しくは、[cf push](/docs/cli/reference/cfcommands/index.html#cf_push) を参照してください。
+**cf push** コマンドについて詳しくは、[cf app push](/docs/cli/reference/cfcommands/index.html#cf_target) を参照してください。
 
 ### Diego への既存アプリのマイグレーション
 {: #migrateapp}
@@ -58,14 +57,14 @@ Diego は {{site.data.keyword.Bluemix_notm}} のデフォルトの Cloud Foundry
 
 アプリを Diego にマイグレーションするには、以下のステップを実行します。
 
- 1.  [cf CLI ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} と [Diego-Enabler CLI プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} の両方をインストールします。
+ 1.  [cf CLI ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry/cli/releases){: new_window}と [Diego-Enabler CLI プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}の両方をインストールします。
  2. [既知の問題のリスト](depapps.html#knownissues)を確認します。
  3. Diego フラグを設定して、Diego 上で実行するようにアプリを変更します。
   ```
   $ cf enable-diego APPLICATION_NAME
   ```
 
-アプリを更新した後、アプリが開始したことを検証してください。マイグレーション済みのアプリが開始に失敗する場合、問題を特定して解決した後で再始動するまでは、そのアプリはオフラインのままになります。
+アプリを更新した後、アプリが開始して、予期したように機能していることを検証してください。すぐにアプリにアクセスできない場合は、後で再試行してください。マイグレーション済みのアプリが開始に失敗する場合、問題を特定して解決した後で再始動するまでは、そのアプリはオフラインのままになります。
 
 IBM は、必須マイグレーション期間 (その期間が過ぎると DEA アーキテクチャーのサポートが切れます) が近づいてくるとユーザーに警告し、アプリのマイグレーションが完了していない場合、運用チームがユーザーに代わってすべてのアプリをマイグレーションします。
 
@@ -81,14 +80,13 @@ IBM は、必須マイグレーション期間 (その期間が過ぎると DEA 
 アプリを Diego にマイグレーションする際に対処が必要となる可能性のある既知の問題は次のとおりです。
 
   * `--no-route` オプションでデプロイされたワーカー・アプリケーションが、正常として報告されません。これを回避するには、`cf set-health-check APP_NAME none` コマンドでポート・ベースのヘルス・チェックを無効にしてください。
-  * **cf files** コマンドはもうサポートされていません。**cf ssh** コマンドに置き換えられました。**cf ssh** コマンドについて詳しくは、[cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh) を参照してください。
   * アプリによっては、多くのファイル記述子 (inode) を使用することがあります。この問題が発生した場合は、`cf scale APP_NAME [-k DISK]` コマンドでアプリのディスク割り当て量を増やす必要があります。
 
-既知の問題の完全なリストについては、[Diego へのマイグレーション ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window} に関する Cloud Foundry 資料ページを参照してください。
+既知の問題の完全なリストについては、[Diego へのマイグレーション ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}に関する Cloud Foundry 資料ページを参照してください。
 
-古い DEA アーキテクチャーのサポートが切れるまでは、`cf disable-diego APPLICATION_NAME` コマンドを実行して、DEA に戻ることができます。また、サポートが切れるまでは、新規アプリを DEA アーキテクチャーにデプロイすることも可能です。
+古い DEA アーキテクチャーのサポートが切れるまでは、`cf disable-diego APPLICATION_NAME` コマンドを実行して、DEA に戻ることができます。また、サポートが切れるまでは、アプリを DEA アーキテクチャーにデプロイすることも可能です。
 
-**注:** `disable-diego` コマンドを使用するには、[cf CLI ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} と [Diego-Enabler CLI プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} の両方がインストールされている必要があります。
+**注:** `disable-diego` コマンドを使用するには、[cf CLI ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry/cli/releases){: new_window}と [Diego-Enabler CLI プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}の両方がインストールされている必要があります。
 
 1. アプリケーションを開始せずにデプロイします。
 ```
@@ -112,9 +110,9 @@ IBM は、必須マイグレーション期間 (その期間が過ぎると DEA 
 
 アプリケーションの開始が失敗すると、アプリケーションは停止され、アプリケーション・コンテナーの内容はすべて削除されます。このため、アプリケーションが停止した場合やアプリケーションのステージング・プロセスが失敗した場合、ログ・ファイルを使用することができなくなります。
 
-アプリケーションのログが使用できなくなり、**cf ssh**、**cf scp**、または **cf files** コマンドを使用してアプリケーション・コンテナー内のステージング・エラーの原因を確認できなくなった場合は、代わりに **cf logs** コマンド使用してください。**cf logs** コマンドは Cloud Foundry ログ統合サービスを使用してアプリケーション・ログおよびシステム・ログの詳細を収集するので、このログ統合サービス内にバッファーされていた内容を確認することができます。このログ統合サービスについて詳しくは、[Cloud Foundry へのログイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window} を参照してください。
+アプリケーションのログが使用できなくなり、**cf ssh**、**cf scp**、または **cf files** コマンドを使用してアプリケーション・コンテナー内のステージング・エラーの原因を確認できなくなった場合は、代わりに **cf logs** コマンド使用してください。**cf logs** コマンドは Cloud Foundry ログ統合サービスを使用してアプリケーション・ログおよびシステム・ログの詳細を収集するので、このログ統合サービス内にバッファーされていた内容を確認することができます。このログ統合サービスについて詳しくは、[Cloud Foundry へのログイン ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}を参照してください。
 
-**注:** バッファー・サイズには制限があります。アプリケーションが長時間実行されていて再始動されていない場合、ログ・バッファーがクリアされたために `cf logs appname --recent` コマンドを入力してもログが表示されない可能性があります。したがって、大規模なアプリケーションのステージング・エラーをデバッグするには、アプリケーションをデプロイするときにログをトラッキングするための cf コマンド・ライン・インターフェースとは別のコマンド・ラインに `cf logs appname` コマンドを入力できます。
+**注:** バッファー・サイズには制限があります。アプリケーションが長時間実行されていて再始動されていない場合、ログ・バッファーがクリアされたために `cf app logs appname --recent` コマンドを入力してもログが表示されない可能性があります。したがって、大規模なアプリケーションのステージング・エラーをデバッグするには、アプリケーションをデプロイするときにログをトラッキングするための cf コマンド・ライン・インターフェースとは別のコマンド・ラインに `cf app logs appname` コマンドを入力できます。
 
 {{site.data.keyword.Bluemix_notm}} でアプリケーションをステージングする際に問題が発生している場合は、[「ステージング・エラーのデバッグ (Debugging
 staging errors)」](/docs/debug/index.html#debugging-staging-errors)のステップに従って問題を解決することができます。
@@ -180,7 +178,7 @@ for Java」](/docs/runtimes/liberty/index.html)を参照してください。
   }
   ```
 
-  `package.json` ファイルの詳細については、[package.json ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window} を参照してください。
+  `package.json` ファイルの詳細については、[package.json ](https://www.npmjs.org/doc/files/package.json.html){:new_window} ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン") を参照してください。
 
   * PHP アプリケーション、Ruby アプリケーション、あるいは Python アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、そのアプリケーションのソースが含まれているディレクトリーから、以下のコマンドを使用してください。
 
@@ -198,11 +196,11 @@ cf push appname
   cf target -s <space_name>
   ```
 
-  2. アプリケーション・ディレクトリーに移動し、**cf push** コマンドを使用してアプリをデプロイします。ここで、appname はドメイン内で固有でなければなりません。
+  2. アプリケーション・ディレクトリーに移動し、**cf app push** コマンドを使用してアプリをデプロイします。ここで、appname はドメイン内で固有でなければなりません。
 
   ```
-cf push appname 
-```
+  cf app push appname
+  ```
 
 ## アプリケーション・マニフェスト
 {: #appmanifest}
@@ -218,9 +216,6 @@ cf push appname
 ```
 cf push -f appManifest.yml
 ```
-
-<p>  </p>
-
 
 |オプション	|説明	|使用法または例|
 |:----------|:--------------|:---------------|
@@ -265,11 +260,13 @@ cf push -f appManifest.yml
 ## 環境変数
 {: #app_env}
 
+
+
 環境変数には、{{site.data.keyword.Bluemix_notm}} にデプロイされたアプリケーションの環境情報が含まれています。*Diego* およびビルドパックによって設定される環境変数に加えて、{{site.data.keyword.Bluemix_notm}} 上のアプリケーション用にアプリケーション固有の環境変数を設定することも可能です。
 
-**cf env** コマンドを使用するか、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから、実行中の {{site.data.keyword.Bluemix_notm}} アプリケーションの以下の環境変数を表示できます。
+**bluemix app env** コマンドを使用するか、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから、実行中の {{site.data.keyword.Bluemix_notm}} アプリケーションの以下の環境変数を表示できます。
 
-  * アプリケーションに固有のユーザー定義の変数。ユーザー定義変数をアプリに追加する方法については、[『ユーザー定義環境変数の追加』 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](#ud_env){:new_window} を参照してください。
+  * アプリケーションに固有のユーザー定義の変数。ユーザー定義変数をアプリに追加する方法については、『[ユーザー定義環境変数の追加](#ud_env)』を参照してください。
 
   * サービス・インスタンスにアクセスするための接続情報を含む VCAP_SERVICES 変数。ご使用のアプリケーションが複数のサービスにバインドされている場合、VCAP_SERVICES 変数には各サービス・インスタンスの接続情報が含まれます。例えば次のようにします。
 
@@ -319,7 +316,7 @@ cf push -f appManifest.yml
   }
   ```
 
-DEA およびビルドパックによって設定された環境変数にもアクセスできます。
+Diego およびビルドパックによって設定された環境変数にもアクセスできます。
 
 Diego によって定義された変数を以下に示します。
 
@@ -403,7 +400,7 @@ Diego によって定義された変数を以下に示します。
 
 </dl>
 
-ビルドパックによって定義される変数は、各ビルドパックによって異なります。互換性のある他のビルドパックについては、[ビルドパック ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} を参照してください。
+ビルドパックによって定義される変数は、各ビルドパックによって異なります。互換性のある他のビルドパックについては、[ビルドパック ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}を参照してください。
 
 <ul>
     <li>Liberty ビルドパックによって定義された変数を以下に示します。
@@ -443,7 +440,7 @@ if (process.env.VCAP_SERVICES) {
 }
 ```
 
-各環境変数について詳しくは、[Cloud Foundry 環境変数 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window} を参照してください。
+各環境変数について詳しくは、[Cloud Foundry 環境変数 ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}を参照してください。
 
 ## アプリケーション・デプロイメントのカスタマイズ
 {: #customize_dep}
@@ -480,9 +477,9 @@ if (process.env.VCAP_SERVICES) {
 	2. **「環境変数」**をクリックします。
 	3. **「ユーザー定義」**をクリックし、次に**「追加」**をクリックします。
 	4. 必須フィールドに入力し、次に**「保存」**をクリックします。
-  * cf コマンド・ライン・インターフェースを使用します。`cf set-env` コマンドを使用してユーザー定義変数を追加します。例えば次のようにします。
+  * cf コマンド・ライン・インターフェースを使用します。`cf env-set` コマンドを使用してユーザー定義変数を追加します。例えば次のようにします。
     ```
-    cf set-env appname env_var_name env_var_value
+    cf env-set appname env_var_name env_var_value
     ```
 
   * `manifest.yml` ファイルを使用します。このファイル内に値の組を追加します。例えば次のようにします。
@@ -519,14 +516,3 @@ cf コマンド・ライン・インターフェースを使用してアプリ�
 *.swp
 tmp/
 ```
-
-# 関連リンク
-{: #rellinks notoc}
-
-## 関連リンク
-{: #general}
-
-* [Deploying with Application Manifests ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
-* [CF Manifest Generator ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
-* [Getting Started with cf v6 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
-* [IBM Continuous Delivery Pipeline for Bluemix の概要](/docs/services/DeliveryPipeline/index.html#getstartwithCD)

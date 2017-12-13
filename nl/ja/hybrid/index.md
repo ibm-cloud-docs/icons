@@ -14,10 +14,10 @@ lastupdated: "2017-09-07"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# {{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated の管理
+# {{site.data.keyword.Bluemix_local_notm}} および {{site.data.keyword.Bluemix_dedicated_notm}} の管理
 {: #mng}
 
-{{site.data.keyword.Bluemix}} Local または {{site.data.keyword.Bluemix_notm}} Dedicated の管理者権限がある場合は、**「管理」**ページに移動して、リソースの管理、割り当て量の使用状況のモニター、ユーザー許可の管理、アップグレード通知のスケジュール設定、セキュリティー・レポートおよびログの表示などを行います。組織の管理は、スペースを作成し、[ユーザーの役割と権限](/docs/admin/index.html#oc_useradmin)を設定することによって行うことができます。『[組織の管理](/docs/admin/orgs_spaces.html)』を参照してください。
+{{site.data.keyword.Bluemix_local_notm}} または {{site.data.keyword.Bluemix_dedicated_notm}} の管理者権限がある場合は、**「管理」**ページに移動して、リソースの管理、割り当て量の使用状況のモニター、ユーザー許可の管理、アップグレード通知のスケジュール設定、セキュリティー・レポートおよびログの表示などを行います。組織の管理は、スペースを作成し、[ユーザーの役割と権限](/docs/admin/index.html#oc_useradmin)を設定することによって行うことができます。『[組織の管理](/docs/admin/orgs_spaces.html)』を参照してください。
 {:shortdesc}
 
 {: #ld_table1}

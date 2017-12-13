@@ -1,34 +1,34 @@
 ---
 
-
-
 copyright:
 
   years: 2016, 2017
-lastupdated: "2016-03-15"
 
-
+lastupdated: "2016-10-25"
 
 ---
 
 {:shortdesc: .shortdesc}
 
-# Bluemix インフラストラクチャー・レイヤー
-
+# {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・レイヤー
+{: #infralayers}
 
 
 {{site.data.keyword.Bluemix_notm}} は、オペレーティング・システムおよびインフラストラクチャーのレイヤーを管理する必要がなくなるように、それらを要約するか非表示にします。ただし、オペレーティング・システムやアプリのミドルウェアについて詳細に知る必要がある状況が発生する場合もあります。
 {:shortdesc}
 
-## Bluemix インフラストラクチャー・レイヤーの表示
-{:viewinfra}
+## {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・レイヤーの表示
+{: #viewinfra}
 
-cf stacks コマンドを実行して、アプリがデプロイされる先の使用可能なスタック (つまり、ルート・ファイル・システム) を表示することができます。また、*-s* オプションと *stack_name* を指定して cf push コマンドを使用する場合もスタックを指定できます。ここで、stack_name は、`lucid64` や `cflinuxfs2` などのルート・ファイル・システムです。
+**bluemix app stacks** コマンドを実行して、アプリがデプロイされる先の使用可能なスタック (つまり、ルート・ファイル・システム) を表示することができます。また、*-s* オプションと *stack_name* を指定して **bluemix app push** コマンドを使用する場合もスタックを指定できます。ここで、stack_name は、`lucid64` や `cflinuxfs2` などのルート・ファイル・システムです。
 
 ```
-cf push appName -s stack_name
+bluemix app push appName -s stack_name
 ```
+
 `cf buildpacks` コマンドを使用して、WebSphere Liberty profile や SDK for Node.js など、アプリを実行するランタイムとして使用可能なミドルウェア・コンポーネントを表示できます。また、次のコマンドを使用して、アプリのランタイム環境を指定できます。
+
+
 ```
-cf push appName -b buildpackname
+bluemix app push appName -b buildpackname
 ```

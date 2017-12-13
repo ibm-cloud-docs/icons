@@ -2,10 +2,9 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-10-20"
 
 ---
-
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
@@ -30,7 +29,7 @@ CSR を有効にするには、CSR の生成時に以下の情報を入力する
 
 **国の名前**
 
-  国または地域を表す 2 桁のコード。例えば、「US」はアメリカ合衆国を表します。他の国や地域については、CSR を作成する前に、[ISO 国別コードのリスト ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} を調べてください。
+  国または地域を表す 2 桁のコード。例えば、「US」はアメリカ合衆国を表します。他の国や地域については、CSR を作成する前に、[ISO 国別コードのリスト ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://www.iso.org/obp/ui/#search){:new_window}を調べてください。
 
 **都道府県**
 
@@ -52,7 +51,7 @@ CSR を有効にするには、CSR の生成時に以下の情報を入力する
 
   SSL 証明書の要求先サイトの完全修飾ドメイン名 (FQDN)。
 
-CSR の作成方法は、ご使用のオペレーティング・システムによって様々です。以下の例は、[OpenSSL コマンド・ライン・ツール ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.openssl.org/){:new_window} を使用して CSR を作成する方法を示しています。
+CSR の作成方法は、ご使用のオペレーティング・システムによって様々です。以下の例は、[OpenSSL コマンド・ライン・ツール ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://www.openssl.org/){:new_window}を使用して CSR を作成する方法を示しています。
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -63,7 +62,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 証明書は認証局によって発行され、その認証局によってデジタル署名されています。CSR の作成後は、パブリック認証局に SSL 証明書を生成できます。
 
-##SSL 証明書のアップロード
+## SSL 証明書のアップロード
 {: #ssl_certificate}
 
 セキュリティー・プロトコルを適用して、アプリケーションの通信におけるプライバシーを提供することで、盗聴、不正アクセス、およびメッセージ偽造を防止することができます。
@@ -72,14 +71,12 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 証明書をアップロードするには、その前に証明書署名要求を作成する必要があります。『[証明書署名要求の作成](#ssl_csr)』を参照してください。
 
-カスタム・ドメインを使用する場合、SSL 証明書を提供するために、
-以下の地域エンドポイントを使用して、Bluemix で組織に割り振られた URL
-経路を指定します。
+カスタム・ドメインを使用する場合、SSL 証明書を提供するために、以下の地域エンドポイントを使用して、{{site.data.keyword.Bluemix_notm}} で組織に割り振られた URL 経路を指定します。
 
   * US-South: secure.us-south.bluemix.net
+  * EU-DE: secure.eu-de.bluemix.net
   * EU-GB: secure.eu-gb.bluemix.net
   * AU-SYD: secure.au-syd.bluemix.net
-  * EU-DE: secure.eu-de.bluemix.net
 
 
 アプリケーションの証明書をアップロードするには、次のようにします。
@@ -130,7 +127,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
     このオプションを有効にすると、SSL で保護されたドメインにアクセスしようとするユーザーは、クライアント側の証明書を提供するよう要求されます。例えば、Web ブラウザーでユーザーが SSL で保護されたドメインにアクセスしようとすると、Web ブラウザーは、そのドメインのクライアント証明書を提供するようユーザーにプロンプトを出します。**「クライアント証明書トラストストア」**ファイルのアップロード・オプションを使用して、カスタム・ドメインへのアクセスを許可するクライアント・サイドの証明書を定義します。
 
-  **注:** {{site.data.keyword.Bluemix_notm}} ドメイン管理のカスタム証明書機能は、トランスポート層セキュリティー (TLS) プロトコルのサーバー名表示 (SNI) 拡張機能に依存します。このため、カスタム証明書で保護されている {{site.data.keyword.Bluemix_notm}} アプリケーションにアクセスするクライアント・コードは TLS 実装の SNI 拡張機能をサポートする必要があります。詳細については、[RFC 4346 のセクション 7.4.2 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} を参照してください。
+  **注:** {{site.data.keyword.Bluemix_notm}} ドメイン管理のカスタム証明書機能は、トランスポート層セキュリティー (TLS) プロトコルのサーバー名表示 (SNI) 拡張機能に依存します。このため、カスタム証明書で保護されている {{site.data.keyword.Bluemix_notm}} アプリケーションにアクセスするクライアント・コードは TLS 実装の SNI 拡張機能をサポートする必要があります。詳細については、[RFC 4346 のセクション 7.4.2 ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}を参照してください。
 
   **クライアント証明書トラストストア**
 

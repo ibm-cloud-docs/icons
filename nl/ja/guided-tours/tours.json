@@ -7,30 +7,18 @@
     },
     "tourPanels": [
       {
-        "image": "/docs/api/content/guided-tours/images/whatsnew/introducing_cloud_brand.gif",
-        "title": "新機能",
-        "body": "Bluemix の名称は、IBM Cloud に変更されました。 新しい名前に加え、制御性と柔軟性を向上させるいくつかの大きな改善が行われることを発表します。 進行中の更新の内容については、「サポート」>「新機能」からご確認ください。"
-      },
-      {
-        "image": "/docs/api/content/guided-tours/images/whatsnew/global_dashboard.gif",
+        "image": "/docs/api/content/guided-tours/images/whatsnew/resource-group_v3.gif",
         "title": "リソース・グループの導入",
         "body": "カスタマイズ可能なグループを使用して、リソースを編成し、保護することができます。",
         "ctaText": "詳細はこちら。",
         "ctaURL": "/docs/admin/resourcegroups.html"
       },
       {
-        "image": "/docs/api/content/guided-tours/images/whatsnew/global_search.gif",
-        "title": "探しているものを見つける",
-        "body": "すべての組織、地域、およびリソース・グループにわたって検索できるようになりました。",
-        "ctaText": "詳細はこちら。",
-        "ctaURL": "/docs/overview/ui.html"
-      },
-      {
-        "image": "/docs/api/content/guided-tours/images/whatsnew/filters.gif",
-        "title": "1 カ所ですべて表示",
+        "image": "/docs/api/content/guided-tours/images/whatsnew/Dashboard_v3.gif",
+        "title": "Customize your view",
         "body": "すべてのリソースのグローバル・ビューをお望みですか? ダッシュボードからすべてのリソースを、お客様にとって重要なものでフィルターに掛けられるようになりました。",
         "ctaText": "詳細はこちら。",
-        "ctaURL": "/docs/overview/ui.html"
+        "ctaURL": "/docs/overview/ui.html#dashboardview"
       }
     ]
   },
@@ -45,21 +33,21 @@
     },
     "tourPanels": [
       {
-        "image": "/docs/api/content/guided-tours/images/welcome1.png",
+        "image": "/docs/api/content/guided-tours/images/whatsnew/introducing_cloud_brand.gif",
         "title": "IBM Cloud へようこそ",
-        "body": "ご利用いただき、ありがとうございます。お客様のアカウントで、お客様用に作成済みのリソース・グループ、組織、スペースのセットアップが完了しました。これで、プロジェクトの作業を開始する準備が整いました。"
+        "body": "ご利用いただき、ありがとうございます。 お客様のアカウントで、お客様用に作成済みのリソース・グループ、組織、スペースのセットアップがすべて完了しました。これで、プロジェクトの作業を開始する準備が整いました。"
       },
       {
-        "image": "/docs/api/content/guided-tours/images/welcome1.png",
+        "image": "/docs/api/content/guided-tours/images/whatsnew/navigation.gif",
         "title": "何を構築しますか?",
-        "body": "お客様がアプリを実行するためにビルディング・ブロックとして使用できる、広範なサービスを提供します。メニュー・アイコンを使ってナビゲーションを開き、IBM Cloud の探索を開始してください。"
+        "body": "お客様がアプリを実行するためにビルディング・ブロックとして使用できる、広範なサービスを提供します。 メニュー・アイコンを使ってナビゲーションを開き、IBM Cloud の探索を開始してください。"
       },
       {
-        "image": "/docs/api/content/guided-tours/images/whatsnew/all-resources-wide.png",
-        "title": "1 カ所ですべて表示",
+        "image": "/docs/api/content/guided-tours/images/whatsnew/Dashboard_v3.gif",
+        "title": "Customize your view",
         "body": "すべてのリソースのグローバル・ビューをお望みですか? 構築を開始した後に、ダッシュボードに移動して、お客様にとって重要なものでフィルターに掛けられます。",
         "ctaText": "詳細はこちら。",
-        "ctaURL": "/docs/overview/ui.html"
+        "ctaURL": "/docs/overview/ui.html#dashboardview"
       }
     ]
   }

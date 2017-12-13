@@ -5,8 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-09-25"
-
+lastupdated: "2017-11-09"
 
 ---
 
@@ -124,15 +123,15 @@ Java™ およびすべての Java 関連の商標およびロゴは Oracle や�
 
 他の会社名、製品名、およびサービス名は、それぞれ各社の商標または登録商標です。
 
-## IBM Bluemix 利用条件
+## IBM {{site.data.keyword.Bluemix_notm}} ご利用条件
 {: #terms}
 
-{{site.data.keyword.Bluemix_notm}} サービスの使用は、IBM クラウド・サービス契約書のご利用条件にしたがって提供されます。この契約書の各国版は、[www.ibm.com/terms ![外部リンク・アイコン](../icons/launch-glyph.svg)](www.ibm.com/terms){: new_window} から入手できます。特定の {{site.data.keyword.Bluemix_notm}} サービスを対象とするすべての追加条件を含む IBM {{site.data.keyword.Bluemix_notm}} サービス記述書の最新版は、[http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm ![外部リンク・アイコン](../icons/launch-glyph.svg)](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm){: new_window} にあります。
+{{site.data.keyword.Bluemix_notm}} サービスの使用は、IBM クラウド・サービス契約書のご利用条件にしたがって提供されます。この契約書の各国版は、[www.ibm.com/terms ![外部リンク・アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/terms){: new_window} から入手できます。特定の {{site.data.keyword.Bluemix_notm}} サービスを対象とするすべての追加条件を含む IBM {{site.data.keyword.Bluemix_notm}} サービス記述書の最新版は、[http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm ![外部リンク・アイコン](../icons/launch-glyph.svg)](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm){: new_window} にあります。
 
 ### IBM WebSphere Application Server Liberty Profile イメージのライセンス
 Dockerfile と関連スクリプトは、Apache License 2.0 に基づいて使用許諾されます。IBM JRE および IBM WebSphere® Application Server for Developers は、「IBM プログラムのご使用条件 (保証適用外プログラム用)」に基づいて使用許諾されます。これらのライセンスは、前述のとおり LICENSE=view 環境変数を使用してイメージから表示するか、IBM JRE と IBM WebSphere Application Server for Developers でオンライン検索して入手できます。このライセンスを再配布することは禁止されています。
 
-## Bluemix プライバシー・ポリシー
+## {{site.data.keyword.Bluemix_notm}} プライバシー・ポリシー
 {: #privacy_policy}
 
 IBM オンライン・プライバシー・ステートメントは、[https://www.ibm.com/privacy/details/us/en ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://www.ibm.com/privacy/details/us/en){: new_window} にあります。このステートメントには、IBM ではどのような個人情報を収集するか、それをどのように使用するか、およびこのような個人情報に関してお客様にはどのような選択肢があるかについての情報が記載されています。

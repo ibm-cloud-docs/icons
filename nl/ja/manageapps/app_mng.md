@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-26"
+lastupdated: "2017-10-25"
 
 ---
 
@@ -39,8 +39,6 @@ Diego はアプリケーションに直接 *ssh* 接続し、ポート転送を�
 
 *noproxy* ユーティリティーは、Diego セル内で実行中のアプリケーションにのみ適用できます。
 
-
-
 #### devconsole
 {: #devconsole}
 
@@ -62,10 +60,10 @@ Node バージョン 6.3.0 以上では、開発コンソールで、アプリ�
 
 *hc* ユーティリティーは *proxy* の開始も行います。
 
-*hc* ユーティリティーは *noproxy* と組み合わせて使用できます。ヘルス・センターを *noproxy* と一緒に使用するには、まず最初に `cf ssh` コマンドを使用してポート転送を設定します。例えば次のようにします。
+*hc* ユーティリティーは *noproxy* と組み合わせて使用できます。ヘルス・センターを *noproxy* と一緒に使用するには、まず最初に `bluemix app files` コマンドを使用してポート転送を設定します。例えば次のようにします。
 
 ```
-$ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
+$ bluemix app files -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 
 次に、ヘルス・センター・クライアントと接続するため、[MQTT connection ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} を使用し、ホストを `127.0.0.1`、ポートを `1883` に指定します。
@@ -83,7 +81,7 @@ $ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 
 *shell* ユーティリティーは *proxy* も開始します。
 
-Diego は `cf ssh` コマンドを介した対話式シェルを提供します。したがって、*shell* ユーティリティーは、DEA で実行中のアプリケーションにのみ有用です。
+Diego は `bluemix app files` コマンドを介した対話式シェルを提供します。したがって、*shell* ユーティリティーは、DEA で実行中のアプリケーションにのみ有用です。
 
 ### 以下のユーティリティーでは、Liberty のみがサポートされます
 {: #liberty_utilities}
@@ -95,10 +93,10 @@ Diego は `cf ssh` コマンドを介した対話式シェルを提供します�
 
 *debug* ユーティリティーは *proxy* も開始します。
 
-*debug* ユーティリティーは *noproxy* と組み合わせて使用できます。デバッガーを *noproxy* と一緒に使用するには、まず最初に `cf ssh` コマンドを使用してポート転送を設定します。例えば次のようにします。
+*debug* ユーティリティーは *noproxy* と組み合わせて使用できます。デバッガーを *noproxy* と一緒に使用するには、まず最初に `bluemix app files` コマンドを使用してポート転送を設定します。例えば次のようにします。
 
 ```
-$ cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
+$ bluemix app files -N -T -L 7777:127.0.0.1:7777 <appName>
 ```
 
 次に、Eclipse で接続するため、「リモート Java 構成」を使用し、ホストを `127.0.0.1` として、ポートを `7777` として指定します。
@@ -117,10 +115,10 @@ JMX コネクターの構成について詳しくは、[Configuring secure JMX c
 
 *localjmx* ユーティリティーは、[localConnector-1.0 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty フィーチャーを有効にします。これをローカル・ポート転送と組み合わせることで、リモート JMX クライアントによるアプリケーションの管理を許可する代替方法が使用可能になります。
 
-*localjmx* ユーティリティーは、Diego セルで実行中のアプリケーションにのみ適用できます。*localjmx* を使用するには、まず最初に `cf ssh` コマンドを使用してポート転送を設定します。例えば次のようにします。
+*localjmx* ユーティリティーは、Diego セルで実行中のアプリケーションにのみ適用できます。*localjmx* を使用するには、まず最初に `bluemix app files` コマンドを使用してポート転送を設定します。例えば次のようにします。
 
 ```
-$ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
+$ bluemix app files -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
 
 次に、JConsole と接続するため、「リモート・プロセス」を選択し、`127.0.0.1:5000` を指定し、保護されていない接続を使用します。
@@ -146,13 +144,13 @@ inspector ユーティリティーは、デフォルトで *proxy* を開始し�
 *noproxy* と、6.3.0 より前の Node.js バージョンの場合、ローカル・ポート転送を介して URL へのアクセスを有効にします。例えば次のようにします。
 
 ```
-$ cf ssh -N -T -L <localPort>:127.0.0.1:8790 <appName>
+$ bluemix app files -N -T -L <localPort>:127.0.0.1:8790 <appName>
 ```
 
 次に、Chrome Web ブラウザーで http://127.0.0.1:8790 を表示します。次のように BLUEMIX_APP_MGMT_INSPECTOR 環境変数を設定して、ポートを変更します。
 
 ```
-$ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
+$ bluemix app env-set <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 ```
 
 バージョン 6.3.0 以上の Node.js の場合、Chrome DevTools をアプリに接続するために使用できる URL が含まれているログ・メッセージが見つかります。ログ・メッセージは、以下のようなものになります。
@@ -165,7 +163,7 @@ $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 ローカル・ポート転送を介して URL へのアクセスを有効にします。例えば次のようにします。
 
 ```
-$ cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
+$ bluemix app files -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 
 最新版の Chrome Web ブラウザーを使用して **chrome://inspect** を表示します。その URL から、アプリが、アプリケーション・ファイルのリンク (例えば、**file:///home/vcap/app/app.js**) と共にリストされているのが分かります。  
@@ -196,20 +194,22 @@ $ cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 例えば、*devconsole* ユーティリティーと *shell* ユーティリティーを使用可能にするには、以下のコマンドを実行します。
 
 ```
-$ cf set-env myApp BLUEMIX_APP_MGMT_ENABLE devconsole+shell```
+$ bluemix app env-set myApp BLUEMIX_APP_MGMT_ENABLE devconsole+shell
+```
 
 環境変数を設定したら、その後アプリケーションを再ステージングしてください。
 
 ```
-$ cf restage myApp```
+$ bluemix app restage myApp
+```
 
 アプリケーションに併せてアプリ管理ユーティリティーもインストールされることのないようにする場合は、*BLUEMIX_APP_MGMT_INSTALL* 環境変数を「false」に設定して、アプリケーションを再ステージングします。
 
 例えば次のようにします。
 
 ```
-$ cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
-$ cf restage myApp
+$ bluemix app env-set myApp BLUEMIX_APP_MGMT_INSTALL false
+$ bluemix app restage myApp
 ```
 
 ## 制限
@@ -217,7 +217,7 @@ $ cf restage myApp
 
 * アプリ管理ユーティリティーは、アプリケーションが DEA ノードで実行中の場合は、単一インスタンス・アプリケーションのみをサポートします。
 * アプリ管理を使用してアプリケーションに対して行った変更は一時的なものであり、このモードを終了すると失われます。このモードは一時的な開発での使用に限られ、パフォーマンスのために実稼働環境としての使用は意図されていません。
-* ほとんどのアプリ管理ユーティリティーは、`manifest.yml` ファイル (command) または CF CLI (-c) に開始コマンドが設定されていると機能しません。
+* ほとんどのアプリ管理ユーティリティーは、`manifest.yml` ファイル (command) または bluemix CLI (-c) に開始コマンドが設定されていると機能しません。
 これらのメソッドはビルドパックのオーバーライドであり、Node.js アプリ
 ケーションを開始するためのアンチパターンです。最良の結果を得るには、`package.json` ファイルまたは `Procfile` に開始コマンドを設定してください。
 

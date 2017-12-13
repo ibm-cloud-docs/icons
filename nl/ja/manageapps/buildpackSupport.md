@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-10-10"
+lastupdated: "2017-08-30"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2016-10-10"
 ## 組み込みの IBM ビルドパック
 {: #built-in_ibm_buildpacks}
 
-[Liberty for Java](/docs/runtimes/liberty/index.html)、[SDK for Node.js](/docs/runtimes/nodejs/index.html)、および [ASP.NET Core](/docs/runtimes/dotnet/index.html) については、IBM は 2 つのバージョン (n & n - 1) (例えば、IBM Liberty Buildpack v1.22 & IBM Liberty Buildpack v1.21) をサポートします。
-各ビルドパックは、必要に応じて、対応するランタイムの 1 つ以上のメジャ
-ー・バージョンを提供し、サポートします (例えば IBM SDK, Java Technology Edition バージョン 7 リリース 1 とバージョン 8)。ビルドパックは通常、使用可能なランタイムの最新のマイナー・バージョンを使用して、1 カ月に 1 回更新されます。
+[Liberty for Java](/docs/runtimes/liberty/index.html)、[SDK for Node.js](/docs/runtimes/nodejs/index.html)、および [ASP.NET Core](/docs/runtimes/dotnet/index.html) については、IBM は 2 つのバージョン (n & n - 1) (例えば、IBM Liberty Buildpack v3.12 & IBM Liberty Buildpack v3.11) をサポートします。各ビルドパックは、必要に応じて、対応するランタイムの 1 つ以上のメジャ
+ー・バージョンを提供し、サポートします。ビルドパックは通常、使用可能なランタイムの最新のマイナー・バージョンを使用して、1 カ月に 1 回更新されます。
 
-[IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html) については、IBM は、[Swift.org](http://swift.org) で使用可能な Swift の最新バージョンに適合したビルドパックのサポートを提供します。ビルドパックに対する更新は、Swift の使用可能な最新リリース・バージョンに合わせて行われます。
+[IBM {{site.data.keyword.Bluemix_notm}} Runtime for Swift](/docs/runtimes/swift/index.html) については、IBM は、[Swift.org](http://swift.org) で使用可能な Swift の最新バージョンに適合したビルドパックのサポートを提供します。ビルドパックに対する更新は、Swift の使用可能な最新リリース・バージョンに合わせて行われます。
 
 {{site.data.keyword.Bluemix_notm}} 上で現在サポートされているバージョンの組み込み IBM ビルドパックについて問題が報告される可能性がありますが、それらの問題は最新バージョンに対して検証される必要があります。欠陥が検出された場合、IBM は将来レベルのランタイムでのフィックスと、対応するビルドパックを提供します。IBM は、前のメジャー・バージョンおよびマイナー・バージョン (N-1、n-1) 用のフィックスは提供しません。IBM は、IBM ビルドパックを使用している場合でも (例えば、Liberty ビルドパックと共に Open JDK を使用している場合など)、コミュニティー・ランタイムをサポートすることはありません。これらのコミュニティー・ランタイムは、下記の『組み込みのコミュニティー・ビルドパック』に記述されているのと同じサポート・ポリシーに従います。
 

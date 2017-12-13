@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-09"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2017-05-31"
 
 {{site.data.keyword.Bluemix_notm}} アカウントと SoftLayer アカウントをリンクして、組み合わせたリソースを使用できます。{{site.data.keyword.Bluemix_notm}} アカウントと Softlayer アカウントをリンクすると、単一の {{site.data.keyword.Bluemix_notm}} 請求書を受け取ることになります。既存の {{site.data.keyword.Bluemix_notm}} アカウントがある場合、SoftLayer リソースについての {{site.data.keyword.Bluemix_notm}} を介した請求は、アカウントのリンク後に開始する新しい請求処理サイクルから有効になります。
 
-**重要:** {{site.data.keyword.Bluemix_notm}} でリンクされるアカウントはすべて、従量課金 (PAYG) アカウントでなければなりません。新規の従量課金 (PAYG) アカウントを作成するか、既存の従量課金 (PAYG) アカウントをリンクするか、あるいは既存のトライアル・アカウント (後で従量課金 (PAYG) アカウントにアップグレード) をリンクできます。サブスクリプション {{site.data.keyword.Bluemix_notm}} アカウントをリンクすることはできません。
+**重要:** {{site.data.keyword.Bluemix_notm}} でリンクされるアカウントはすべて、従量課金 (PAYG) アカウントでなければなりません。新規の従量課金 (PAYG) アカウントを作成するか、既存の従量課金 (PAYG) アカウントをリンクするか、あるいは既存のトライアル・アカウント (後で従量課金 (PAYG) アカウントにアップグレード) をリンクできます。{{site.data.keyword.Bluemix_notm}} サブスクリプション・アカウントをリンクすることはできません。
 
 アカウントをリンクするには、SoftLayer アカウントのマスター・ユーザーでなければなりません。
 
@@ -34,7 +34,7 @@ lastupdated: "2017-05-31"
 
 マスター・ユーザーは、{{site.data.keyword.Bluemix_notm}} アカウントと SoftLayer アカウントをリンクするために、以下の手順を実行します。
 
- 1. {{site.data.keyword.slportal}} で、**「{{site.data.keyword.Bluemix_notm}} アカウントをリンク (Link a {{site.data.keyword.Bluemix_notm}} Account)」**をクリックします。
+ 1. カスタマー・ポータルで**「{{site.data.keyword.Bluemix_notm}} アカウントをリンクします」**をクリックします。
  2. SoftLayer アカウントと {{site.data.keyword.Bluemix_notm}} アカウントをリンクする場合のご利用条件を読み、同意します。
  3. 要求されたら、{{site.data.keyword.Bluemix_notm}} アカウントに関連付けられている E メール・アドレスを指定します。{{site.data.keyword.Bluemix_notm}} アカウントがない場合は、使用する E メール・アドレスを指定し、{{site.data.keyword.Bluemix_notm}} への招待を受けてアカウントを作成するための手順に従います。
 
@@ -50,7 +50,7 @@ lastupdated: "2017-05-31"
 
 アカウントをリンクした場合、現行月のサイクルの間、{{site.data.keyword.Bluemix_notm}} の使用量が引き続き計測され、その使用量については {{site.data.keyword.Bluemix_notm}} の請求書で請求されます。翌月の初めから、{{site.data.keyword.Bluemix_notm}} と SoftLayer の課金が、{{site.data.keyword.Bluemix_notm}} 請求書で結合されるようになります。
 
-例えば、2017年 4 月 16 日にアカウントをリンクした場合、4 月の使用量については Bluemix の請求書を受け取ります。アカウントをリンクしたタイミングによっては、SoftLayer 使用量に対して別個の請求書を受け取ることがあります。SoftLayer と {{site.data.keyword.Bluemix_notm}} の両方の 5 月の使用量は、{{site.data.keyword.Bluemix_notm}} アカウントを介して請求されます。
+例えば、2017年 4 月 16 日にアカウントをリンクした場合、4 月の使用量については {{site.data.keyword.Bluemix_notm}} の請求書を受け取ります。アカウントをリンクしたタイミングによっては、SoftLayer 使用量に対して別個の請求書を受け取ることがあります。SoftLayer と {{site.data.keyword.Bluemix_notm}} の両方の 5 月の使用量は、{{site.data.keyword.Bluemix_notm}} アカウントを介して請求されます。
 
 ![Bluemix アカウントと SoftLayer アカウントのリンクのサマリー](BluemixSoftLayerBill.svg)
 

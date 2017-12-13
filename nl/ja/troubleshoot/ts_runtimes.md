@@ -2,17 +2,16 @@
 
 copyright:
   years: 2015, 2017
-  
-lastupdated: "2017-01-10"
+lastupdated: "2017-11-08"
 
 ---
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock} 
+{:codeblock: .codeblock}
 
 
 # ランタイムに関するトラブルシューティング
@@ -25,18 +24,18 @@ lastupdated: "2017-01-10"
 ## アプリがプッシュされたときに使用できないビルドパックが使用される
 {: #ts_loading_bp}
 
-アプリをプッシュしたときに、最新のビルドパック・コンポーネントを使用できない場合があります。使用できないコンポーネントがロードされないように組み込みメカニズムを備えたビルドパックを使用するか、アプリのプッシュや再ステージを行う前にアプリのキャッシュ・ディレクトリー内のコンテンツを削除します。 
+アプリをプッシュしたときに、最新のビルドパック・コンポーネントを使用できない場合があります。使用できないコンポーネントがロードされないように組み込みメカニズムを備えたビルドパックを使用するか、アプリのプッシュや再ステージを行う前にアプリのキャッシュ・ディレクトリー内のコンテンツを削除します。
 
 ビルドパックが更新されてからアプリをプッシュまたは再ステージすると、最新のビルドパック・コンポーネントのロードが自動的に行われません。その結果、アプリは使用できないビルドパック・コンポーネントをキャッシュから使用することになります。アプリを最後にプッシュしてからビルドパックに適用された更新は実装されていません。
 {: tsSymptoms}
 
 ビルドパックによっては、すべての更新コンポーネントをインターネットから自動的にダウンロードして、いつでも最新バージョンを使用できるように構成されていないものもあります。
-{: tsCauses} 
+{: tsCauses}
 
 組み込みメカニズムを備えたビルドパックを使用して、使用できないコンポーネントをロードしないようにすることができます。例えば、以下のビルドパックを使用できます。
 {: tsResolve}
 
-  * [Cloud Foundry Java ビルドパック![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/java-buildpack){: new_window}。このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。このメカニズムによる処理方法について詳しくは、[extending-caches.md ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}を参照してください。 
+  * [Cloud Foundry Java ビルドパック![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/java-buildpack){: new_window}。このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。このメカニズムによる処理方法について詳しくは、[extending-caches.md ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}を参照してください。
   * [Cloud Foundry Node.js ビルドパック![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。このビルドパックは、環境変数を使用して同様の機能を提供します。この Node.js ビルドパックを有効にして、毎回インターネットからノード・モジュールをダウンロードするには、cf コマンド・ライン・インターフェースに次のコマンドを入力します。 	
   ```
   set NODE_MODULES_CACHE=false
@@ -53,15 +52,15 @@ rm -rfv $2/*
   ```
 cf push appname -p app_path -b <modified_null_buildpack>
   ```
- 4. 以下のコマンドを使用して、希望する最新のビルドパックでアプリをプッシュします。 
+ 4. 以下のコマンドを使用して、希望する最新のビルドパックでアプリをプッシュします。
   ```
 cf push appname -p app_path -b <latest_buildpack>
   ```
- 
+
 ## PHP ビルドパックからの NOTICE メッセージ
 {: #ts_phplog}
 
-ログからの NOTICE を含むメッセージが表示されることがあります。このようなメッセージのロギングは、ロギング・レベルを変更すれば止めることができます。	
+ログからの NOTICE を含むメッセージが表示されることがあります。このようなメッセージのロギングは、ロギング・レベルを変更すれば止めることができます。
 
 PHP ビルドパックを使用してアプリを {{site.data.keyword.Bluemix_notm}} にプッシュすると、以下のような `NOTICE` を含むメッセージが表示されることがあります。
 {: tsSymptoms}
@@ -73,14 +72,14 @@ PHP ビルドパックを使用してアプリを {{site.data.keyword.Bluemix_no
 • 2015-01-26T15:01:00.63+0100 [App/0] ERR [26-Jan-2015 14:00:59] NOTICE: ready to handle connections
 ```
 PHP ビルドパックでは、error_log パラメーターはロギング・レベルを定義します。デフォルトでは、`error_log` パラメーターの値は **stderr notice** です。次の例は、Cloud Foundry が提供する PHP ビルドパックの `nginx-defaults.conf` ファイルに含まれる、デフォルトのロギング・レベル構成を示しています。詳しくは、[cloudfoundry/php-buildpack ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window} を参照してください。
-{: tsCauses} 
+{: tsCauses}
 
 ```
 daemon off;
 error_log stderr notice;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-	
+
 `NOTICE` メッセージは通知用であり、問題を示していない場合があります。これらのメッセージのロギングは、ビルドパックの nginx-defaults.conf ファイルに含まれるロギング・レベルを `stderr notice` から `stderr error` に変更することで停止できます。例:
 {: tsResolve}
 
@@ -107,7 +106,7 @@ Python アプリの構成情報が欠落しています。
 {: tsResolve}
 
  1. `requirements.txt` ファイルを Python アプリのルート・ディレクトリーに追加します。
- 
+
  `requirements.txt` ファイルには、Python アプリに必要なライブラリー・パッケージとそのパッケージのバージョンが指定されています。以下の例には、`requirements.txt` ファイルの内容が示されています。ここで、`web.py==0.37` は、ダウンロードされる `web.py` ライブラリーのバージョンが 0.37 であることを示しています。`wsgiref==0.1.2` は、web.py ライブラリーに必要な Web サーバー・ゲートウェイ・インターフェースのバージョンが 0.1.2 であることを示しています。
 
 	 ```
@@ -116,19 +115,19 @@ Python アプリの構成情報が欠落しています。
 	 ```
 	 `requirements.txt` ファイルの構成方法について詳しくは、 「[Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html)」を参照してください。
 
- 2. `Procfile` ファイルを Python アプリのルート・ディレクトリーに追加します。`Procfile` ファイルには、Python アプリの開始コマンドを含めてください。以下のコマンドでは、*yourappname* が Python アプリの名前で、*PORT* は、アプリのユーザーから要求を受信するために Python アプリが使用しなければならないポート番号です。*$PORT* はオプションです。開始コマンドに PORT を指定しない場合は、アプリ内部にある `VCAP_APP_PORT` 環境変数下のポート番号が使用されます。 
+ 2. `Procfile` ファイルを Python アプリのルート・ディレクトリーに追加します。`Procfile` ファイルには、Python アプリの開始コマンドを含めてください。以下のコマンドでは、*yourappname* が Python アプリの名前で、*PORT* は、アプリのユーザーから要求を受信するために Python アプリが使用しなければならないポート番号です。*$PORT* はオプションです。開始コマンドに PORT を指定しない場合は、アプリ内部にある `VCAP_APP_PORT` 環境変数下のポート番号が使用されます。
 	```
 	web: python <yourappname>.py $PORT
 	```
 
-これでサード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできます。	
+これでサード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできます。
 
 
 ## 「インスタンスの詳細」ページの「アクション」ボタンが使用不可になっている
 {: #ts_actionsbutton}
 
 「インスタンスの詳細」ページの「アクション」ボタンが使用不可になっています。
-{: tsSymptoms} 
+{: tsSymptoms}
 
 この問題は、以下の理由で発生します。
 {: tsCauses}
@@ -138,13 +137,13 @@ Python アプリの構成情報が欠落しています。
  * アプリが古いバージョンの Liberty ビルドパックでデプロイされている。
 
 問題の原因が古いバージョンの Liberty ビルドパックである場合は、{{site.data.keyword.Bluemix_notm}} でアプリを再デプロイしてください。それ以外の場合は、以下のクライアント・アプリケーションのログ・ファイルをサポート・チームにご提供ください。
-{: tsResolve} 
+{: tsResolve}
 
   * logs/messages.log
   * logs/stdout.log
   * logs/stderr.log
- 
-  
+
+
 ## トレース・ウィンドウまたはダンプ・ウィンドウを開くために資格情報が必要である
 {: #ts_username}
 
@@ -173,13 +172,13 @@ Python アプリの構成情報が欠落しています。
 ```
 
 この問題は、以下の理由で発生します。
-{: tsCauses} 
+{: tsCauses}
 
   * トレースまたはダンプ管理の機能は、実行中のアプリ・インスタンスのみを対象としている。停止中、開始中、または異常終了状態のアプリ・インスタンスには、トレースまたはダンプ操作は使用できません。
-  * トレースまたはダンプ・ダイアログが開く時点でアプリ・インスタンスの状況が移行中である。 
+  * トレースまたはダンプ・ダイアログが開く時点でアプリ・インスタンスの状況が移行中である。
 
 ウィンドウを閉じてから、再度開いてください。
-{: tsResolve} 
+{: tsResolve}
 
 
 ## インスタンスに異なる traceSpecification 構成がある
@@ -192,12 +191,12 @@ Python アプリの構成情報が欠落しています。
 {: tsCauses}
 
   * 1 つ以上のインスタンスの構成を以前に変更した。あるインスタンスの traceSpecification 構成を変更した場合、その変更は同じアプリの他のインスタンスには適用されません。例えば、アプリで log4j を使用していて、このアプリのインスタンスが 2 つあるものとします。インスタンス 0 のログ・レベルは info から debug に変更できますが、インスタンス 1 のログ・レベルは info のままになります。
-  
+
   * アプリが拡大し、新規インスタンスが追加された。RMU は、既存のインスタンスの traceSpecification 構成を新規の拡大されたインスタンスに適用しません。新規インスタンスは、デフォルト構成を使用します。例えば、アプリで log4j を使用していて、それに 1 つのインスタンスがあるものとします。このインスタンスのログ・レベルを info から debug に変更できます。この変更を行った後に、アプリを 2 つのインスタンスに拡大した場合、新規インスタンスのログ・レベルは、debug ではなく info になります。
 
 アクションは不要です。
 この動作は予期されたものです。
-{: tsResolve} 
+{: tsResolve}
 
 
 ## ディスク割り当て量の超過
@@ -209,7 +208,7 @@ Python アプリの構成情報が欠落しています。
 {: tsSymptoms}
 
 この問題は、以下のいずれかの理由で発生します。
-{: tsCauses} 
+{: tsCauses}
 
   * ダンプ・ファイルは実行中のアプリ・インスタンスと共に生成され、割り振られたディスク割り当て量を使い尽くします。デフォルトでは、1 つのアプリ・インスタンスあたりのディスク割り当て量は 1 GB です。
 ディスク使用量を確認するには、**「ダッシュボード」>「アプリケーション」>「アプリ・ランタイム」**とクリックします。以下の例では、アプリの 2 つのインスタンスについての、ディスク使用量を含むランタイム情報を示しています。
@@ -222,11 +221,10 @@ Python アプリの構成情報が欠落しています。
   * ディスク割り当て量は、現在の組織の割り当て量によって制限されます。
 
 以下のいずれかの方法を使用します。
-{: tsResolve} 
+{: tsResolve}
 
   * ダンプ・ファイルをダウンロード後に削除します。
   * デプロイメント・マニフェストに以下の入力内容を含めて、ディスク割り当て量をもっと大きくしてアプリを再デプロイします。
     ```
 	ディスク割り当て量: 2048
 ```
-	

@@ -3,7 +3,8 @@
 
 
 copyright:years: 2015, 2017
-lastupdated: "2017-03-29"
+lastupdated: "2017-11-16"
+
 
 ---
 
@@ -64,6 +65,6 @@ IBM ID を変更することはできませんが、関連付けられている�
 ## フィードバックの提供
 {: #feedback}
 
-{{site.data.keyword.Bluemix_notm}} およびサービスの改善に関するアイデアを送信するには、[IBM Cloud Ideas ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://ibmcloud.ideas.aha.io){: new_window} にアクセスしてください。新しいアイデアに関するこのポータルの使用方法について詳しくは、[Think, write, submit: New ideas portal for IBM Cloud ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/){: new_window} を参照してください。
+{{site.data.keyword.Bluemix_notm}} およびサービスの改善に関するアイデアを送信するには、[IBM Cloud Ideas ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://ibmcloud.ideas.aha.io){: new_window} にアクセスしてください。アイデアに関するこのポータルの使用方法について詳しくは、[Think, write, submit: New ideas portal for IBM Cloud ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/){: new_window}を参照してください。
 
-資料に関するフィードバックを提供するには、各ページ上の**「フィードバック (Feedback)」**リンクをクリックするか、タイトルの後にある**「GitHub での編集 (Edit in GitHub)」**リンクをクリックして IBM とコラボレーションしてください。資料に関するフィードバックの提供について詳しくは、[When it comes to docs, everyone can contribute in Bluemix ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/){: new_window} を参照してください。
+資料に関するフィードバックを提供するには、各ページ上の**「フィードバック (Feedback)」**リンクをクリックするか、タイトルの後にある**「GitHub での編集 (Edit in GitHub)」**リンクをクリックして IBM とコラボレーションしてください。資料に関するフィードバックの提供について詳しくは、[When it comes to docs, everyone can contribute in {{site.data.keyword.Bluemix_notm}} ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/){: new_window}を参照してください。

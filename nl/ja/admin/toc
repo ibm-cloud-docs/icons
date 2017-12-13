@@ -9,20 +9,21 @@
     アカウントのセットアップ
         adminpublic.md
         profile.md
-    
+
     softlayerlink.md
+    resourcegroups.md
 
     {: .topicgroup}
     組織
         orgs_spaces.md
         manageorg.md
-        
+
     notifications.md
     {: .navgroup-end}
 
     {: .navgroup id="learn"}
-    {: .topicgroup}  
+    {: .topicgroup}
     ベスト・プラクティス
         patterns.md
-        
+
     {: .navgroup-end}

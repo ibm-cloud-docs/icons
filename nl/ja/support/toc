@@ -6,4 +6,5 @@
 
     {: .navgroup id="help"}
     index.md
+    ViewStatus.md
     {: .navgroup-end}

@@ -1,24 +1,28 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="bluemix-overview" audience="platform" href="/docs/overview/whatisbluemix.html"}
-Bluemix とは
-  
+{: .toc subcollection="overview" audience="platform" href="/docs/overview/ibm-cloud.html"}
+IBM Cloud とは
+
     {: .navgroup id="learn"}
-    whatisbluemix.md
-    bluemixoverviewui.md
+    {: .topicgroup}
+IBM Cloud とはibm-cloud.md
+        prereqs.md
+        manageaccess.md
+        resource-groups.md
+    ui.md
+    security.md
     cf.md
-    prereqs.md
-    
+    ../whatsnew/
+
     {: .topicgroup}
     関連リンク
-        [Bluemix とは](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){: new_window}
-        [使用を開始するには](http://www.ibm.com/cloud-computing/bluemix/getting-started/){: new_window}
-        [ハイブリッド・モデルについて](http://www.ibm.com/cloud-computing/bluemix/hybrid/){: new_window}
+        [IBM Cloud をお勧めする理由](https://www.ibm.com/cloud-computing/learn-more/why-ibm-cloud/){: new_window}
+        [プライベート・クラウド選択の詳細](https://www.ibm.com/cloud-computing/solutions/private-cloud/){: new_window}
     {: .navgroup-end}
-    
+
     {: .navgroup id="reference"}
-    ../navigation/
+    crn.md
     glossary/index.md
-    ../whatsnew/
+    ../navigation/
     {: .navgroup-end}

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-10-10"
+lastupdated: "2017-11-09"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2017-10-10"
 ## 手動でのコスト計算
 {: #manual}
 
-{{site.data.keyword.Bluemix_notm}} コストをご自身で見積もると、{{site.data.keyword.Bluemix_notm}} コストがどのように計算されるかを詳しく理解することができます。ランタイムの価格および使用されるサービスの価格を考慮することにより、{{site.data.keyword.Bluemix_notm}} を使用してアプリケーションを構築しホストする場合の総額を計算することができます。ランタイムとサービスの価格は時折変動するため、総額を計算する際には、{{site.data.keyword.Bluemix_notm}} 価格設定シートで最新情報を参照する必要があります。
+{{site.data.keyword.Bluemix_notm}} コストをご自身で見積もると、{{site.data.keyword.Bluemix_notm}} コストがどのように計算されるかを詳しく理解することができます。ランタイムの価格および使用されるサービスの価格を考慮することにより、{{site.data.keyword.Bluemix_notm}} を使用してアプリケーションを構築しホストする場合の総額を計算することができます。ランタイムとサービスの価格は時折変動するため、総額を計算する際には、{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}}で最新情報を参照する必要があります。
 
 ## サポートされている通貨
 
@@ -60,7 +60,7 @@ lastupdated: "2017-10-10"
 |SEK|	  スウェーデン・クローネ|
 |USD|    米国ドル|
 |ZAR|	  南アフリカ共和国ランド|
-{:caption="表 2. サポートされている通貨" caption-side="top"}
+{:caption="表 1. サポートされている通貨" caption-side="top"}
 
 {{site.data.keyword.Bluemix_notm}} アカウントと SoftLayer アカウントをリンクした場合、受け取る単一の請求書は米国ドル (USD) 単位のもののみになります。
 {: tip}

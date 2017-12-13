@@ -3,7 +3,7 @@
 
 
 copyright:years: 2015, 2017
-lastupdated: "2017-03-29"
+lastupdated: "2017-11-16"
 
 
 ---
@@ -13,14 +13,15 @@ lastupdated: "2017-03-29"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Bluemix への登録
+# {{site.data.keyword.Bluemix_notm}} への登録
 
 {{site.data.keyword.Bluemix}} アカウントの登録には、既存の IBM ID を使用するか、新規 IBM ID を作成するか、フェデレーテッド ID を使用することができます。Aフェデレーテッド ID は、IBM に登録済みの会社ドメイン内の ID で、これにより、ドメインとユーザーの資格情報を使用して IBM Web アプリケーションにアクセスできます。
-{:shortdesc}
+{:shortdesc}  
 
-{{site.data.keyword.Bluemix_notm}} アカウントの登録には、既存の IBM ID を使用するか、新規 IBM ID を作成するか、フェデレーテッド ID を使用することができます。フェデレーテッド ID は、IBM に登録済みの会社ドメイン内の ID で、これにより、ドメインとユーザーの資格情報を使用して IBM Web アプリケーションにアクセスできます。  
-
+{: #federatedid}
 お客様の会社が IBM への登録作業を完了している場合にのみ、フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にアカウント登録できます。会社のドメインを IBM に登録すると、会社の既存のユーザー資格情報で IBM の製品やサービスにログインできるようになります。認証は、お客様の会社の ID プロバイダーによって処理されます。フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にログインすると、お客様の会社のログイン・ページを通じたログインを求められます。会社または組織のドメインを IBM に登録するための申請、またはこのプロセスの詳細については、[IBMid Enterprise Federation Adoption Guide ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window} を参照してください。フェデレーテッド ID の登録を申請する際には、IBM のサポート役 (オファリング担当者やお客様担当者など) が必要です。
+
+IBM では、この ID 連携のために Security Assertion Markup Language 2.0 (SAML 2.0) を利用しています。SAML 2.0 は、セキュリティー・ドメイン間で認証データを交換するための標準版です。これは XML ベースのプロトコルであり、アサーションが格納されたセキュリティー・トークンを使用して、組織の「ID プロバイダー」と「IBM Rely Party (RP)」 (サービス・プロバイダー) の間で情報を受け渡します。
 
 | 登録方法| 詳細|    
 |-----------------|---------|

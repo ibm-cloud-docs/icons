@@ -3,7 +3,8 @@
 copyright:
 
   years: 2017
-lastupdated: "2017-10-06"
+lastupdated: "2017-11-16"
+
 
 ---
 
@@ -24,7 +25,7 @@ lastupdated: "2017-10-06"
 
 ## サービス ID の作成
 
-サービス ID を作成するには、**「管理」** &gt; **「セキュリティー」** &gt; **「ID およびアクセス」**に進み、サイド・パネルから**「サービス ID」**を選択します。プロセスに従って、サービス ID の名前と説明を作成します。次に、**「アクション」**メニューを使用してサービス ID を管理します。ポリシーの割り当てと API キーの作成から開始できます。API キーの処理について詳しくは、[サービス ID の API キーの管理](/docs/iam/serviceid_keys.html#serviceidapikeys)を参照してください。サービス ID を管理するために使用される CLI コマンドの詳細については、[API キーとポリシーを管理するためのコマンド](https://console-regional.ng.bluemix.net/docs/cli/reference/bluemix_cli/bx_cli.html#bx_commands_iam)を参照してください。 
+サービス ID を作成するには、**「管理」** &gt; **「セキュリティー」** &gt; **「ID およびアクセス」**に進み、サイド・パネルから**「サービス ID」**を選択します。プロセスに従って、サービス ID の名前と説明を作成します。次に、**「アクション」**メニューを使用してサービス ID を管理します。ポリシーの割り当てと API キーの作成から開始できます。API キーの処理について詳しくは、[サービス ID の API キーの管理](/docs/iam/serviceid_keys.html#serviceidapikeys)を参照してください。サービス ID を管理するために使用される CLI コマンドの詳細については、[API キーとポリシーを管理するためのコマンド](/docs/cli/reference/bluemix_cli/bx_cli.html#bx_commands_iam)を参照してください。 
 
 ## サービス ID の更新
 

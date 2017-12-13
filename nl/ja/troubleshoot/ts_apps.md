@@ -1,9 +1,10 @@
 ---
 
 copyright:
+
   years: 2015, 2017
 
-lastupdated: "2017-04-10"
+lastupdated: "2017-11-09"
 
 ---
 
@@ -15,12 +16,8 @@ lastupdated: "2017-04-10"
 {:codeblock: .codeblock}
 
 
-
-
-
 # アプリの管理に関するトラブルシューティング
 {: #managingapps}
-
 
 アプリの管理に関する一般的な問題には、アプリを更新できない、2 バイト文字が表示されないなどがあります。多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
@@ -42,7 +39,7 @@ lastupdated: "2017-04-10"
 メッセージ・ウィンドウを閉じ、「ランタイム」ペイン内の**「リセット」**ボタンをクリックします。
 {: tsResolve}
 
-## Bluemix 領域間の自動フェイルオーバーを使用できない
+## {{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーを使用できない
 {: #ts_failover}
 
 {{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーは使用できません。ただし、回避策として、複数の IP アドレス間のフェイルオーバーをサポートする DNS プロバイダーを使用できます。
@@ -118,7 +115,7 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
 {{site.data.keyword.eclipsetoolsfull}} が稼働している Java のバージョンを確認するには、以下の手順を実行します。
 {: tsResolve}
 
-  1. IBM Eclipse Tools for Bluemix で、**「ヘルプ」** > **「Eclipse について」** > **「インストールの詳細」** > **「構成」**を選択します。
+  1. IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} で、**「ヘルプ」** > **「Eclipse について」** > **「インストールの詳細」** > **「構成」**を選択します。
   2. リストから `eclipse.vm` プロパティーを検索します。次の行は、`eclipse.vm` プロパティーの例を示しています。
 
 	```
@@ -172,7 +169,7 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
 
 現在の組織に、関連付けられているスペースがない場合は、アプリまたはサービスを作成できません。
 
-Bluemix でアプリを作成しようとすると、以下のエラー・メッセージが表示されます。
+{{site.data.keyword.Bluemix_notm}} でアプリを作成しようとすると、以下のエラー・メッセージが表示されます。
 {: tsSymptoms}
 
 BXNUI0515E: 組織のスペースは取得されませんでした。 ネットワーク接続問題が発生したか、現在の組織に関連付けられているスペースがないかのいずれかです。`
@@ -187,7 +184,8 @@ BXNUI0515E: 組織のスペースは取得されませんでした。 ネット�
   * cf コマンド・ライン・インターフェースに `cf create-space <space_name> -o <organization_name>` と入力します。
 
 やり直してください。
-このメッセージが再び表示される場合は、[Bluemix 状況 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/bluemixstatus){: new_window} ページにアクセスし、サービスまたはコンポーネントに問題があるかどうか確認してください。
+このメッセージが再び表示される場合は、[{{site.data.keyword.Bluemix_notm}} 状況 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/bluemixstatus){: new_window} ページにアクセスし、サービスまたはコンポーネントに問題があるかどうか確認してください。
+
 
 ## 要求されたアクションを実行できない
 {: #ts_authority}
@@ -209,10 +207,10 @@ BXNUI0515E: 組織のスペースは取得されませんでした。 ネット�
  * 開発者役割を持っている、別の組織およびスペースを選択します。
  * 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。 詳細については、[組織およびスペースの管理](/docs/admin/orgs_spaces.html) を参照してください。
 
-## 許可エラーのため、Bluemix サービスにアクセスできない
+## 許可エラーのため、{{site.data.keyword.Bluemix_notm}} サービスにアクセスできない
 {: #ts_vcap}
 
-サービス資格情報がアプリ内でハードコーディングされている場合、アプリが {{site.data.keyword.Bluemix_notm}} にアクセスした時に許可エラーが発生することがあります。
+サービス資格情報がアプリ内でハードコーディングされている場合、アプリが {{site.data.keyword.Bluemix_notm}} サービスにアクセスすると許可エラーが発生することがあります。
 
 {{site.data.keyword.Bluemix_notm}} サービスと通信するようにアプリを構成した後に、そのアプリを {{site.data.keyword.Bluemix_notm}} にデプロイします。しかし、アプリを使用して {{site.data.keyword.Bluemix_notm}} サービスにアクセスできず、許可エラーを受け取ります。
 {: tsSymptoms}
@@ -229,7 +227,7 @@ process.env.VCAP_SERVICES
 他のプログラム言語で使用できるコマンドについて詳しくは、[Java ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。
 
 
-## IBM Eclipse Tools for Bluemix を使用してアプリをデプロイできない
+## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
 {: #ts_bm_tools_facet}
 
 サポートされないファセットが Eclipse プロジェクトに適用されると、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリを {{site.data.keyword.Bluemix_notm}} にデプロイできないことがあります。
@@ -257,7 +255,7 @@ Bad Gateway エラーは通常、サイトをホストするメイン・サー�
 
 あまり一般的ではありませんが、Bad Gateway エラーの原因として他に、インターネット・サービス・プロバイダー (ISP) のドロップアウト、ファイアウォール構成の誤り、およびブラウザー・キャッシュのエラーがあります。
 
-{{site.data.keyword.Bluemix_notm}} サービスがダウンしていることが疑われる場合は、まず {{site.data.keyword.Bluemix_notm}} 状況 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/bluemixstatus){: new_window} ページを確認してください。回避策として、別の {{site.data.keyword.Bluemix_notm}} 地域でそのサービスを使用することができます。[別の地域でのサービスの使用 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/reqnsi.html#cross_region_service){: new_window} に詳細情報があります。サービス状況が正常の場合は、問題を解決するために以下のステップを試行してください。
+{{site.data.keyword.Bluemix_notm}} サービスがダウンしていることが疑われる場合は、まず [{{site.data.keyword.Bluemix_notm}} 状況 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/bluemixstatus){: new_window} ページを確認してください。回避策として、別の {{site.data.keyword.Bluemix_notm}} 地域でそのサービスを使用することができます。[別の地域でのサービスの使用 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/reqnsi.html#cross_region_service){: new_window} に詳細情報があります。サービス状況が正常の場合は、問題を解決するために以下のステップを試行してください。
 {: tsResolve}
 
   * 以下のようにしてアクションを再試行します。
@@ -291,7 +289,7 @@ Bad Gateway エラーは通常、サイトをホストするメイン・サー�
 ## Android アプリが {{site.data.keyword.mobilepushshort}} を受信できない
 {: #ts_push}
 
-Google にアクセスできない特定地域の Android アプリは、IBM {{site.data.keyword.mobilepushshort}} サービスから送信された通知を受信できません。この場合、回避策はサード・パーティーのサービスを使用することです。Bluemix アプリに {{site.data.keyword.mobilepushshort}} サービスをバインドして、登録デバイスにメッセージを送信します。ただし、Android プラットフォームで開発されたアプリは、特定の地域で通知を受信できません。
+Google にアクセスできない特定地域の Android アプリは、IBM {{site.data.keyword.mobilepushshort}} サービスから送信された通知を受信できません。この場合、回避策はサード・パーティーのサービスを使用することです。{{site.data.keyword.Bluemix_notm}} アプリに {{site.data.keyword.mobilepushshort}} サービスをバインドして、登録デバイスにメッセージを送信します。ただし、Android プラットフォームで開発されたアプリは、特定の地域で通知を受信できません。
 {: tsSymptoms}
 
 IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android プラットフォームで開発されたモバイル・アプリに通知を送ります。Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。Android アプリが GCM サービスに到達できない地域では、Android アプリは {{site.data.keyword.mobilepushshort}} を受信できません。
@@ -328,7 +326,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 
   * 持つことのできるサービス・インスタンスの数の上限を撤廃するには、トライアル・アカウントを有料アカウントに切り替えます。 トライアル・アカウントから有料アカウントへの切り替えについて詳しくは、[プランの変更方法](/docs/pricing/index.html#changing) を参照してください。
 
-## 実行可能ファイルを Bluemix で実行できない
+## 実行可能ファイルを {{site.data.keyword.Bluemix_notm}} で実行できない
 {: #ts_executable}
 
 実行可能ファイルが別の環境で開発およびビルドされた場合、{{site.data.keyword.Bluemix_notm}} でそれらを実行できないことがあります。
@@ -418,35 +416,10 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{si
 {: tsCauses}
 
 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{site.data.keyword.Bluemix_notm}} にプッシュするときは、「アプリケーション」ウィザードの「アプリケーションの詳細 (Application details)」ページで**「マニフェスト・ファイルに保存 (Save to the manifest file)」**チェック・ボックスを選択してください。これにより、ウィザードで指定した変数が、アプリケーション用のマニフェスト・ファイルに保存されます。次にそのウィザードを開いたときに、それらの変数は自動的に表示されます。
-{: tsResolve}
-
-<!-- begin STAGING ONLY -->
-
-## Bluemix Live Sync Debug がコマンド・ラインから開始しない
-{: #ts_no_debug}
-
-コマンド・ラインを使用して IBM Bluemix Live Sync Debug フィーチャーをアプリに対して使用可能にしたが、デバッグ・インターフェースにアクセスできません。  
-
-**BLUEMIX_APP_MGMT_ENABLE** 環境変数を設定し、アプリにデバッグ・フィーチャーを使用可能にしました。しかし、`app_url/bluemix-debug/manage` でデバッグ・ユーザー・インターフェースにアクセスできません。
-{: tsSymptoms}
-
-以下の状況では、デバッグ・フィーチャーを使用可能にすることができません。
-{: tsCauses}
-
-  * `manifest.yml` に command 属性が含まれる場合
-  * **-c** オプションを使用してアプリを {{site.data.keyword.Bluemix_notm}} にプッシュする場合
-
-以下のいずれかのオプションを使用して問題を解決します。
-{: tsResolve}
-
-  * 推奨されるのは、IBM Node.js ビルドパックを使用してアプリを開始する方法です。詳しくは、『[{{site.data.keyword.Bluemix_notm}} への Node.js アプリケーションのデプロイ](/docs/runtimes/nodejs/index.html#nodejs_runtime)』トピックの「開始コマンド (Startup command)」セクションを参照してください。
-  * `manifest.yml` の command 属性を command: null に修正するか、push コマンドを編集して `-c null` を組み込むことで、既存アプリにコマンドを使用不可にします。
-  * `manifest.yml` から **command** 属性を削除します。その後、{{site.data.keyword.Bluemix_notm}} から現行アプリを削除し、アプリを再びプッシュします。
-
-<!-- end STAGING ONLY -->  
+{: tsResolve}  
 
 
-## Bluemix 上で組織が見つからない
+## 組織が {{site.data.keyword.Bluemix_notm}} で見つからない
 {: #ts_orgs}
 
 ある {{site.data.keyword.Bluemix_notm}} 地域で作業しているときに、{{site.data.keyword.Bluemix_notm}} で自分の組織が見つからない場合があります。
@@ -473,7 +446,7 @@ cf コマンド・ライン・インターフェースを使用して {{site.dat
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Eclipse ツールを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュする場合は、まず {{site.data.keyword.Bluemix_notm}} サーバーを作成し、自分の組織が作成された {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントを指定します。Eclipse ツールの使用について詳しくは、『[IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for Bluemix)](/docs/manageapps/eclipsetools/eclipsetools.html)』を参照してください。  
+Eclipse ツールを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュする場合は、まず {{site.data.keyword.Bluemix_notm}} サーバーを作成し、自分の組織が作成された {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントを指定します。Eclipse ツールの使用について詳しくは、[IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用したアプリのデプロイ](/docs/manageapps/eclipsetools/eclipsetools.html)を参照してください。  
 
 ## アプリの経路を作成できない
 {: #ts_hostistaken}
@@ -530,12 +503,12 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 
 
-## Liberty アプリケーションが Bluemix にプッシュされる際、2 バイト文字が適切に表示されない
+## アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
 {: #ts_doublebytes}
 
 サーブレットまたは JSP ファイルに対して Unicode サポートが適切に構成されていない場合、2 バイト文字が適切に表示されない可能性があります。
 
-Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされたときは、アプリ内に指定されている 2 バイト文字は正しく表示されません。
+アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされたときは、アプリ内に指定されている 2 バイト文字は正しく表示されません。
 {: tsSymptoms}
 
 この問題は、サーブレットまたは JSP ファイルに対して Unicode サポートが適切に構成されていない場合に発生する可能性があります。
@@ -622,7 +595,7 @@ Node.js アプリを更新する時、または Node.js アプリを {{site.data
 Node.js アプリについてさらにヒントを見るには、[Node.js アプリケーションに関するヒント (Tips for Node.js Applications) ](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "「外部リンク」アイコン"){: new_window}を参照してください。
 
 
-## Eclipse に Bluemix Liberty アプリをインポートした後、`server.xml` ファイル内に構成エラーが現れる
+## Eclipse に {{site.data.keyword.Bluemix_notm}} Liberty アプリをインポートした後、`server.xml` ファイル内に構成エラーが現れる
 {: #ts_eclipse}
 
 {{site.data.keyword.Bluemix_notm}} Liberty アプリを Eclipse にインポートした後、`server.xml` ファイル内に構成エラーを認めた場合は、プロジェクトから `server.xml` ファイルを削除しなければならないことがあります。
@@ -652,7 +625,7 @@ Java』](/docs/runtimes/liberty/index.html)を参照してください。
 [git update![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://git-scm.com/docs/git-update-index){: new_window} コマンドを使用して、各スクリプトのアクセス権を実行可能に変更できます。例えば、`git update --chmod=+x script.sh` と入力できます。
 {: tsResolve}
 
-## IBM Bluemix Continuous Delivery の Delivery Pipeline からアプリをデプロイできない
+## {{site.data.keyword.Bluemix_notm}} Continuous Delivery の Delivery Pipeline からアプリをデプロイできない
  {: #ts_devops_to_bm}
 
  アプリに `manifest.yml` ファイルが存在しない場合、{{site.data.keyword.contdelivery_short}} の {{site.data.keyword.deliverypipeline}} を使用してアプリをデプロイできないことがあります。

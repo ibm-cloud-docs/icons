@@ -47,12 +47,12 @@
     
     }, {
     "id": "docs_homepage_platform",
-    "title": "Bluemix プラットフォーム",
+    "title": "IBM クラウド",
     "items": [{
-	    	"title": "Bluemix とは",
+	    	"title": "IBM Cloud とは",
 		"description": "インフラストラクチャー、アプリケーション、およびサービスを組み合わせた、クラウドを利用する新しい方法",
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
-		"href": "overview/whatisbluemix.html"
+		"href": "overview/ibm-cloud.html"
     }, {
 		"title": " アカウントの管理",
 		"description": "プロファイルの更新、アカウントと消費量の通知の設定、または組織とスペースの管理を行います。",
@@ -74,7 +74,7 @@
 		"href": "services/services_region.html"
 	}, {
 		"title": "アプリの管理",
-		"description": "Bluemix ユーザー・インターフェースのダッシュボードを使用して、アプリケーションおよびサービスの表示と管理を行うことができます。",
+		"description": "IBM Cloud ユーザー・インターフェースのダッシュボードを使用して、アプリケーションおよびサービスの表示と管理を行うことができます。",
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
@@ -86,8 +86,8 @@
 		"title": "API の管理",
 		"href": "apis/management/index.html"
 	}, {
-		"title": "Bluemix のセキュリティー",
-		"description": "機能、インフラストラクチャー、運用のセキュリティーと、物理的セキュリティーを Bluemix がどのように提供するのかを理解できます。",
+		"title": "IBM Cloud のセキュリティー",
+		"description": "機能、インフラストラクチャー、運用のセキュリティーと、物理的セキュリティーを IBM Cloud がどのように提供するのかを理解できます。",
 		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
 	}, {
@@ -111,12 +111,17 @@
 		"href": "navigation/notices.html"
 	}, {
 		"title": "用語集",
-		"description": "Bluemix の用語集。",
+		"description": "IBM Cloud の用語集。",
 		"href": "overview/glossary/index.html"
 	}, {
 		"title": "新機能",
-		"description": "Bluemix の新機能",
+		"description": "IBM Cloud の新機能",
 		"href": "whatsnew/index.html"
+	}, {
+		"title": "チュートリアル",
+		"description": "クラウド・プラットフォームでの構築に役立つチュートリアル、アーキテクチャー・ガイド、その他のリソース",
+		"img": "homepage/images/architectures.svg",
+		"href": "tutorials/index.html"
 	}, {
 		"title": "Architecture Center",
 		"description": "アーキテクチャーを参照して、ご使用のクラウド・アプリに最適のものを決定するのに役立てることができます。",

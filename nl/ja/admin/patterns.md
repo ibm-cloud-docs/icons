@@ -3,20 +3,21 @@
 
 
 copyright:years: 2015, 2017
-lastupdated: "2017-08-30"
+lastupdated: "2017-11-16"
 
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:new_window: target="_blank"}
 
-# Bluemix 環境のセットアップ
+# {{site.data.keyword.Bluemix_notm}} 環境のセットアップ
 {: #patterns}
 
-プロジェクトを成功させるために、時間をかけて、必要なリソースおよびエンタープライズの要件を計画し、設計してください。クラウド・プロジェクトを始めるにあたって、以下の点を検討してください。
+プロジェクトを成功させるために、時間をかけて、必要なリソースおよびエンタープライズの要件を計画し、設計してください。始めるにあたって、以下の点を検討してください。
 
 * いくつのアプリケーション、どのようなタイプのアプリケーションを開発するか?
 * アプリケーションは、どのサービスにアクセスする必要があるか?
@@ -32,13 +33,12 @@ lastupdated: "2017-08-30"
 プロジェクトのニーズに対応するために、{{site.data.keyword.Bluemix}} では 3 つのタイプのクラウド環境が提供されています。
 
 * [{{site.data.keyword.Bluemix_notm}} Public](/docs/overview/whatisbluemix.html "{{site.data.keyword.Bluemix_notm}} Public"): インフラストラクチャー・リソースが、異なる会社およびユーザーで共有されます。
-* [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated "{{site.data.keyword.Bluemix_notm}} Dedicated"): {{site.data.keyword.Bluemix_notm}} Public クラウドと独自のネットワークに安全に接続できる、専用の {{site.data.keyword.BluSoftlayer_notm}} を使用します。
-* [{{site.data.keyword.Bluemix_notm}} Local](/docs/local/index.html#local "{{site.data.keyword.Bluemix_notm}} Local"): 機密性の高いワークロードを保護し、{{site.data.keyword.Bluemix_notm}} Public クラウドおよび {{site.data.keyword.Bluemix_notm}} Dedicated クラウドに安全に接続できる企業ファイアウォールの後ろに位置します。
+* [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated "{{site.data.keyword.Bluemix_dedicated_notm}}"): {{site.data.keyword.Bluemix_notm}} Public と独自のネットワークに安全に接続できる、専用の {{site.data.keyword.BluSoftlayer_notm}} を使用します。
+* [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local "{{site.data.keyword.Bluemix_local_notm}}"): 機密性の高いワークロードを保護し、{{site.data.keyword.Bluemix_notm}} Public および {{site.data.keyword.Bluemix_dedicated_notm}} 環境に安全に接続できる企業ファイアウォールの背後に置かれます。
 
 必要なクラウド環境のタイプを決定する一環として、アカウント、組織、スペース、リソース、およびチーム・メンバーの構造を計画します。
 
-ほとんどの会社では、単一の {{site.data.keyword.Bluemix_notm}} アカウントで十分です。複数のビジネス・エリアがある大企業では、
-ビジネス・ドメインごとに別々の {{site.data.keyword.Bluemix_notm}} アカウントが必要な場合もあります。例えば、大規模なバンキング・コーポレーションの中で、リテール部門とコマーシャル部門に別々のアカウントがあることがあります。
+ほとんどの会社では、単一の {{site.data.keyword.Bluemix_notm}} アカウントで十分です。複数のビジネス・エリアがある大企業では、ビジネス・ドメインごとに別々の {{site.data.keyword.Bluemix_notm}} アカウントが必要な場合もあります。例えば、大規模なバンキング・コーポレーションの中で、リテール部門とコマーシャル部門に別々のアカウントがあることがあります。
 
 次の表に、主ないくつかの要素のサマリーを示します。
 
@@ -87,10 +87,10 @@ lastupdated: "2017-08-30"
 ## 組織体系の決定
 {: #orgstructure}
 
-{{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_notm}} Dedicated、{{site.data.keyword.Bluemix_notm}} Local、またはその任意の組み合わせを使用するクラウド環境を設計するには、次の組織体系を使用できます。
+{{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_dedicated_notm}}、{{site.data.keyword.Bluemix_local_notm}}、またはその任意の組み合わせを使用する環境を設計するには、次の組織体系を使用できます。
 
-* 単一組織: 同じユーザー集合が、{{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_notm}} Dedicated、または {{site.data.keyword.Bluemix_notm}} Local で、組織内のすべての場所で使用可能なリソースにアクセスする必要がある場合は、この体系の使用を検討してください。
-* 複数組織: {{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_notm}} Dedicated、または {{site.data.keyword.Bluemix_notm}} Local 内の異なる環境を分離する必要がある場合は、この体系の使用を検討してください。
+* 単一組織: 同じユーザー集合が、{{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_dedicated_notm}}、または {{site.data.keyword.Bluemix_local_notm}} で、組織内のすべての場所で使用可能なリソースにアクセスする必要がある場合は、この体系の使用を検討してください。
+* 複数組織: {{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_dedicated_notm}}、または {{site.data.keyword.Bluemix_local_notm}} 内の異なる環境を分離する必要がある場合は、この体系の使用を検討してください。
 
 ### 単一組織と複数組織の対比
 {: #singleormulti}
@@ -103,15 +103,15 @@ lastupdated: "2017-08-30"
 * アプリケーションまたはプロジェクト、あるいはその両方に関する境界の適用。
 * ユーザー役割で付与されたリソースを管理する許可。
 
-単一組織体系を実装するには、{{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_notm}} Dedicated、または
-{{site.data.keyword.Bluemix_notm}} Local でアカウントを作成し、1 つの組織を定義します。その後、さまざまな基幹業務 (LOB)、
+単一組織体系を実装するには、{{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_dedicated_notm}}、または
+{{site.data.keyword.Bluemix_local_notm}} でアカウントを作成し、1 つの組織を定義します。その後、さまざまな基幹業務 (LOB)、
 デリバリー・フェーズ、特定プロジェクト、アプリケーション、ユーザー許可、あるいはこれらのコンポーネントの組み合わせに基づいて複数のスペースを定義することができます。
 
-複数組織体系を実装するには、{{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_notm}} Dedicated、または
-{{site.data.keyword.Bluemix_notm}} Local でアカウントを作成します。次に、さまざまな LOB、デリバリー・フェーズ、
+複数組織体系を実装するには、{{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_dedicated_notm}}、または {{site.data.keyword.Bluemix_local_notm}} でアカウントを 1 つ作成します。次に、さまざまな LOB、デリバリー・フェーズ、
 特定プロジェクト、ユーザー許可、あるいはこれらのコンポーネントの組み合わせに対応した組織を定義できます。その後、会社内の同じ部門によってデリバリーされるアプリケーションまたはプロジェクトに基づいて複数のスペースを定義することができます。
 
-**注:** 複数の組織を定義する場合には、従量課金 (PAYG) やサブスクリプションなどの請求可能なアカウントを持っていなければなりません。
+複数の組織を定義する場合には、従量課金 (PAYG) やサブスクリプションなどの請求可能なアカウントを持っていなければなりません。
+{: tip}
 
 ### 組織に関する考慮事項
 {: #orgconsiderations}
@@ -121,8 +121,8 @@ lastupdated: "2017-08-30"
 
  ![{{site.data.keyword.Bluemix_notm}} 内の単一組織アーキテクチャーを示す図](images/singleorg_example.svg "{{site.data.keyword.Bluemix_notm}} 内の単一組織アーキテクチャーを示す図")
 
- 図 1. {{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_notm}} Dedicated、および
-{{site.data.keyword.Bluemix_notm}} Local の単一組織体系の例
+ 図 1. {{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_dedicated_notm}}、および
+{{site.data.keyword.Bluemix_local_notm}} の単一組織体系の例
 {: #bpfigure1}
 
 複数組織体系を実装すると、実行内容と実行者の制御および定義に使用できる、第 1 レベルの境界適用と抽象化が組織によって提供されます。
@@ -136,12 +136,12 @@ lastupdated: "2017-08-30"
 
 クラウド構造にさまざまな組織を定義する際には、以下のガイダンスを考慮してください。
 
-* 命名規則を定義して適用します。例えば、ビジネス・エリア、クラウドのタイプ ({{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_notm}} Local、または {{site.data.keyword.Bluemix_notm}} Dedicated)、プロセス・フェーズ (開発、テスト、実動) に関する情報を組織名に含めるという命名規則を定義します。{{site.data.keyword.Bluemix_notm}} Public にある組織では、地域に関する情報も追加することをお勧めします。
+* 命名規則を定義して適用します。例えば、ビジネス・エリア、クラウドのタイプ、プロセス・フェーズ (開発、テスト、実動) に関する情報を組織名に含めるという命名規則を定義します。{{site.data.keyword.Bluemix_notm}} Public にある組織では、地域に関する情報も追加することをお勧めします。
 * 組織に適用される制約事項を定義します。例えば、その組織で働くチーム・メンバーの役割を定義します。
 * 組織の管理者を特定します。
 * この組織に割り振られたビジネス・エリアを特定します。
 
-以下のシナリオでは、クラウド環境で {{site.data.keyword.Bluemix_notm}} 組織の数を定義する際に採用できるさまざまなアプローチを示します。
+以下のシナリオでは、環境で {{site.data.keyword.Bluemix_notm}} 組織の数を定義する際に採用できるさまざまなアプローチを示します。
 * **シナリオ 1: ビジネス・アプリケーション・デリバリーによるユーザー・グループの分離**
 
  説明: 各 LOB のアプリが、各 LOB のユーザーによって開発、管理、デプロイされる必要があると、企業規則で要求されます。ユーザーが自分の業務に関連するアプリのみにアクセス可能になるよう、セキュリティーが適用される必要があります。ユーザーはさまざまなビジネス・エリアで働き、使用するアプリケーションではさまざまな {{site.data.keyword.Bluemix_notm}} リソースへのアクセスが必要で、重なり合うアクティビティーはありません。
@@ -176,12 +176,12 @@ lastupdated: "2017-08-30"
    図 3. デリバリー・フェーズによって調整された単一組織体系の例
 {: #bpfigure3}
 
-### 組織の命名、制約事項、および管理 
+### 組織の命名、制約事項、および管理
 {: #orgadmin}   
 
 組織に関する以下のガイダンスを考慮してください。
 
-* 命名規則を定義して適用します。例えば、ビジネス・エリア、クラウドのタイプ ({{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_notm}} Local、または {{site.data.keyword.Bluemix_notm}} Dedicated)、IT 役割 (開発、テスト、実動) に関する情報を組織名に含めるという命名規則を定義します。{{site.data.keyword.Bluemix_notm}} Public にある組織では、地域に関する情報も追加することをお勧めします。組織名は、作成後に変更可能です。組織名が変更されたら、すべての組織チーム・メンバーにその変更を通知してください。
+* 命名規則を定義して適用します。例えば、ビジネス・エリア、クラウドのタイプ、IT 役割 (開発、テスト、実動) に関する情報を組織名に含めるという命名規則を定義します。{{site.data.keyword.Bluemix_notm}} Public にある組織では、地域に関する情報も追加することをお勧めします。組織名は、作成後に変更可能です。組織名が変更されたら、すべての組織チーム・メンバーにその変更を通知してください。
 * 組織に適用される制約事項を定義します。例えば、各チーム・メンバーの役割と、その組織での作業に必要な許可を定義します。
 * 組織の管理者を特定します。複数のユーザーに組織管理を委任すると有効です。
 * この組織に割り振られたビジネス・エリアを特定します。組織内での各スペースで発生したアプリケーション使用は、組織レベルで集計されて報告されます。
@@ -220,7 +220,7 @@ lastupdated: "2017-08-30"
 
 クラウド組織にさまざまなスペースを定義する際には、以下のガイダンスを考慮してください。
 
-* 命名規則を定義して適用します。例えば、組織のロケーションおよびクラウドのタイプ ({{site.data.keyword.Bluemix_notm}} Public、{{site.data.keyword.Bluemix_notm}} Dedicated、または {{site.data.keyword.Bluemix_notm}} Local) に関する情報をスペース名に含めるという命名規則を定義します。スペース名は、作成後に変更可能です。スペース名が変更されたら、すべてのスペース・チーム・メンバーにその変更を通知してください。
+* 命名規則を定義して適用します。例えば、組織のロケーションおよびクラウドのタイプに関する情報をスペース名に含めるという命名規則を定義します。スペース名は、作成後に変更可能です。スペース名が変更されたら、すべてのスペース・チーム・メンバーにその変更を通知してください。
 * スペースに適用される制約事項を定義します。例えば、各スペースで開発、管理、デプロイが可能なアプリケーションのタイプを定義します。
 * スペースの管理者を特定します。複数のユーザーにスペース管理を委任すると有効です。
 
@@ -229,11 +229,10 @@ lastupdated: "2017-08-30"
 
 {{site.data.keyword.Bluemix_notm}} に組織を作成したら、インフラストラクチャー・リソースをプロビジョンします。これには、メモリー、インターネット・プロトコル (IP)、サーバー、ストレージなどのリソースが含まれます。
 *	{{site.data.keyword.Bluemix_notm}} Public の場合は、最小リソース・セットが IBM によって組織に割り振られます。アカウントのタイプに基づいて、異なるリソース割り振りがあります。これらのリソースは、IBM によって組織に割り振られる割り当て量を定義します。
-*	{{site.data.keyword.Bluemix_notm}} Dedicated の場合は、IBM からリソース・セットを要求し、{{site.data.keyword.Bluemix_notm}} Dedicated クラウド環境内の異なる組織にそれらを分散することができます。
-*	{{site.data.keyword.Bluemix_notm}} Local の場合は、自社でリソースを提供し、その後、{{site.data.keyword.Bluemix_notm}} Local クラウド環境内の組織にそれらを分散することができます。
+*	{{site.data.keyword.Bluemix_dedicated_notm}} の場合は、IBM からリソース・セットを要求し、{{site.data.keyword.Bluemix_dedicated_notm}} 環境内の異なる組織にそれらを分散することができます。
+*	{{site.data.keyword.Bluemix_local_notm}} の場合は、自社でリソースを提供し、その後、{{site.data.keyword.Bluemix_local_notm}} 環境内の組織にそれらを分散することができます。
 
-{{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_notm}} Dedicated では、IBM から追加リソースを要求することができます。
-{{site.data.keyword.Bluemix_notm}} Local では、ローカル・クラウドでのビジネスの実行に必要なすべてのリソースを、責任をもって提供してください。
+{{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_dedicated_notm}} では、IBM から追加リソースを要求することができます。{{site.data.keyword.Bluemix_local_notm}} では、この環境でのビジネスの実行に必要なすべてのリソースを提供するのは、お客様の責任です。
 
 組織に割り振られた割り当て量は、組織内で使用可能なリソースを表します。割り当て量を管理し、リソースを組織でどのように分散するかを決定してください。
 
@@ -242,14 +241,14 @@ lastupdated: "2017-08-30"
 
 スペースごと、およびインフラストラクチャーごとにアカウントの割り当て量を管理し、モニターします。スペースでプロビジョンされ、デプロイ済みアプリケーションによって使用されるリソースは、組織が使用できる割り当て量の一部を消費します。
 * {{site.data.keyword.Bluemix_notm}} Public で組織の割り当て量を表示および管理する方法について詳しくは、『[割り当て量の管理](/docs/admin/manageorg.html#managequota "割り当て量の管理")』を参照してください。
-* {{site.data.keyword.Bluemix_notm}} Dedicated または {{site.data.keyword.Bluemix_notm}} Local で組織の割り当て量を表示および管理する方法について詳しくは、『[使用量およびレポートの表示](/docs/admin/index.html?pos=2#oc_resource "使用量およびレポートの表示")』を参照してください。
+* {{site.data.keyword.Bluemix_dedicated_notm}} または {{site.data.keyword.Bluemix_local_notm}} で組織の割り当て量を表示および管理する方法について詳しくは、『[使用量およびレポートの表示](/docs/admin/index.html?pos=2#oc_resource "使用量およびレポートの表示")』を参照してください。
 
 ## 役割の割り当て
 {: #roles}
 
 {{site.data.keyword.Bluemix_notm}} アカウントでチーム・メンバーに複数の役割を付与することができます。これらの役割では、アカウントおよび組織のリソースを管理するためのユーザーの許可を定義します。
 * 組織のメンバーに[ユーザー役割](/docs/iam/users_roles.html#userrolesinfo "ユーザー役割")を付与することができます。これらの役割では、組織内でのアクセス権限のレベルを定義し、スペースおよびそのリソースに誰がアクセスできるかを制限します。例えば、異なるスペースに対する異なる許可をユーザーに付与できます。
-* {{site.data.keyword.Bluemix_notm}} Dedicated および {{site.data.keyword.Bluemix_notm}} Local においてのみ、システム情報、アカウント・リソースの使用、レポートおよびログ、カタログ・サービス、ユーザー、および組織ごとのリソース使用を管理するために、[管理役割](/docs/admin/index.html#oc_useradmin "管理役割")をアカウントのメンバーに付与できます。
+* {{site.data.keyword.Bluemix_dedicated_notm}} および {{site.data.keyword.Bluemix_local_notm}} においてのみ、システム情報、アカウント・リソースの使用、レポートおよびログ、カタログ・サービス、ユーザー、および組織ごとのリソース使用を管理するために、[管理役割](/docs/admin/index.html#oc_useradmin "管理役割")をアカウントのメンバーに付与できます。
 
 ### アカウント所有者
 {: #accountowner}
@@ -262,13 +261,12 @@ lastupdated: "2017-08-30"
 * 組織を作成する。
 * アカウントにチーム・メンバーを追加する。
 
-アカウントにチーム・メンバーを追加するには、ユーザーの E メール・アドレス、または E メール・アドレスのリストを使用します。{{site.data.keyword.Bluemix_notm}} Dedicated および {{site.data.keyword.Bluemix_notm}}
-Local では、社内の LDAP を使用してユーザーまたはユーザー・グループ、あるいはその両方を追加することも可能です。ファイルからユーザーをインポートすることもできます。詳しくは、『[ユーザーおよび許可の管理](/docs/admin/index.html#oc_useradmin "ユーザーおよび許可の管理")』を参照してください。
+アカウントにチーム・メンバーを追加するには、ユーザーの E メール・アドレス、または E メール・アドレスのリストを使用します。{{site.data.keyword.Bluemix_dedicated_notm}} および {{site.data.keyword.Bluemix_local_notm}} では、社内の LDAP を使用してユーザーまたはユーザー・グループ、あるいはその両方を追加することも可能です。ファイルからユーザーをインポートすることもできます。詳しくは、『[ユーザーおよび許可の管理](/docs/admin/index.html#oc_useradmin "ユーザーおよび許可の管理")』を参照してください。
 
 アカウント所有者は、以下のタスクも実行できます。
 
 * **管理者**役割を割り当てることで、1 人以上のユーザーを組織の管理者として追加します。組織管理者として 2 人のユーザーを追加することを検討してください。最初のユーザーは、組織の主要な管理者として役割を果たします。2 人目のユーザーは、主要な管理者が不在の場合に、代理の管理者として役割を果たします。
-* {{site.data.keyword.Bluemix_notm}} Public において、[アカウント・タイプ](/docs/pricing/index.html#pay-accounts "アカウント・タイプ")によっては、消費量通知を設定します。まず、アカウント所有者が、特定の限度にコストが達した場合にアラートを受け取るために使用されるしきい値を定義します。その後、[E メール通知を構成します](/docs/admin/account.html#notifications "E メール通知の構成")。アカウント管理者は、E メール内の情報をアラート通知として使用し、提供された情報を基に、アカウントのアップグレードなどのアクションをとります。**注:** 消費量通知 E メールを受け取ることができるのは、アカウント所有者のみです。
+* {{site.data.keyword.Bluemix_notm}} Public において、[アカウント・タイプ](/docs/pricing/index.html#pay-accounts "アカウント・タイプ")によっては、消費量通知を設定します。まず、アカウント所有者が、特定の限度にコストが達した場合にアラートを受け取るために使用されるしきい値を定義します。その後、[E メール通知を構成します](/docs/admin/account.html#notifications "E メール通知の構成")。アカウント管理者は、E メール内の情報をアラート通知として使用し、提供された情報を基に、アカウントのアップグレードなどのアクションをとります。なお、消費量通知 E メールを受け取ることができるのは、アカウント所有者のみです。
 * **管理**役割を割り当てることで、1 人以上のユーザーをアカウントの管理者として追加します。最小で 2 人のユーザーを追加することを検討してください。最初のユーザーは、アカウントの主要な管理者として役割を果たします。2 人目のユーザーは、代理の管理者として役割を果たします。
 * 保守更新や重大インシデント・アラートに関して知らせるアカウント通知を定義します。これらの通知は、E メールまたはショート・メッセージ・サービスを送信するように構成できます。
 
@@ -342,8 +340,7 @@ Local では、社内の LDAP を使用してユーザーまたはユーザー�
 ### Dedicated アカウントおよび Local アカウントの管理役割
 {: #adminroles}
 
-[管理役割](/docs/hybrid/index.html#oc_useradmin "ユーザーおよび許可の管理")は、{{site.data.keyword.Bluemix_notm}} Dedicated アカウントまたは {{site.data.keyword.Bluemix_notm}} Local アカウントを管理するためにユーザーに付与できる許可を定義します。
-システム情報、アカウント・リソースの使用、レポートおよびログ、カタログ・サービス、ユーザー、および組織ごとのリソース使用をユーザーが表示するための読み取りまたは書き込みの許可を付与できます。
+[管理役割](/docs/hybrid/index.html#oc_useradmin "ユーザーおよび許可の管理")は、{{site.data.keyword.Bluemix_dedicated_notm}} アカウントまたは {{site.data.keyword.Bluemix_local_notm}} アカウントを管理するためにユーザーに付与できる許可を定義します。システム情報、アカウント・リソースの使用、レポートおよびログ、カタログ・サービス、ユーザー、および組織ごとのリソース使用をユーザーが表示するための読み取りまたは書き込みの許可を付与できます。
 
 複数組織体系または単一組織体系で、ユーザーと、アカウントの管理に各ユーザーが必要とする許可を定義します。
 
@@ -353,6 +350,6 @@ Local では、社内の LDAP を使用してユーザーまたはユーザー�
 
    * 管理役割: ユーザーには、組織全体を管理する権限があります。
    * ユーザー役割: 書き込み許可がある組織管理者は、アカウントおよび組織にユーザーを追加できます。読み取り許可がある組織管理者は、アカウント内のメンバーのリストを表示できます。
-   * カタログ役割: 書き込み許可があるユーザーは、{{site.data.keyword.Bluemix_notm}} カタログでどの Bluemix サービスおよびスターターをユーザーに表示するかを定義して管理できます。
+   * カタログ役割: 書き込み許可があるユーザーは、{{site.data.keyword.Bluemix_notm}} カタログでどの {{site.data.keyword.Bluemix_notm}} サービスおよびスターターをユーザーに表示するかを定義して管理できます。
    * レポート役割: 書き込み許可があるユーザーは、読み取り許可を持つ他のユーザーがダウンロードできるレポートを表示および追加できます。管理チームのすべてのメンバーに読み取り許可を付与します。
    * ログイン役割: 管理チームのすべてのメンバーにこの役割を付与します。アカウント内でアカウント通知およびシステム情報を表示するアクセス権限が必要な他のユーザーにも、この役割を付与できます。
