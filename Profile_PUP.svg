@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="18px" viewBox="0 0 14 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.25,1.25 C7.97588984,1.25 9.375,2.64911016 9.375,4.375 C9.375,6.10088984 7.97588984,7.5 6.25,7.5 C4.52411016,7.5 3.125,6.10088984 3.125,4.375 C3.12696323,2.64992401 4.52492401,1.25196323 6.25,1.25 Z M6.25,0 C3.83375422,0 1.875,1.95875422 1.875,4.375 C1.875,6.79124578 3.83375422,8.75 6.25,8.75 C8.66624578,8.75 10.625,6.79124578 10.625,4.375 C10.625,1.95875422 8.66624578,1.38777878e-15 6.25,0 Z M12.5,17.5 L11.25,17.5 L11.25,14.375 C11.247968,12.6499525 9.85004748,11.252032 8.125,11.25 L4.375,11.25 C2.64995252,11.252032 1.25203196,12.6499525 1.25,14.375 L1.25,17.5 L0,17.5 L0,14.375 C0.00282412839,11.959925 1.95992498,10.0028241 4.375,10 L8.125,10 C10.540075,10.0028241 12.4971759,11.959925 12.5,14.375 L12.5,17.5 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header" transform="translate(-1406.000000, -15.000000)">
+            <g id="Header-icon-1">
+                <g transform="translate(1264.000000, 0.000000)">
+                    <g id="icon/user/user/20" transform="translate(139.000000, 14.000000)">
+                        <g id="Group">
+                            <g id="user" transform="translate(3.750000, 1.250000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                <g id="color/gray-10" mask="url(#mask-2)" fill="#F3F3F3">
+                                    <g transform="translate(-3.750000, -1.250000)">
+                                        <rect x="0" y="0" width="20" height="20"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                            <rect id="transparent-rectangle" x="0" y="0" width="20" height="20"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
