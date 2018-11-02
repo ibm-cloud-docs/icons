@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Close</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#000000">
+            <path d="M8,14.5 C11.6,14.5 14.5,11.6 14.5,8 C14.5,4.4 11.6,1.5 8,1.5 C4.4,1.5 1.5,4.4 1.5,8 C1.5,11.6 4.4,14.5 8,14.5 Z M8,16 C3.6,16 0,12.4 0,8 C0,3.6 3.6,0 8,0 C12.4,0 16,3.6 16,8 C16,12.4 12.4,16 8,16 Z" id="Shape"></path>
+            <polygon id="Path" points="8 6.6 10.1 4.5 11.5 5.9 9.4 8 11.5 10.1 10.1 11.5 8 9.4 5.9 11.5 4.5 10.1 6.6 8 4.5 5.9 5.9 4.5"></polygon>
+        </g>
+    </g>
+</svg>
