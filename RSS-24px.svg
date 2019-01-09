@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>RSS-24px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="RSS-24px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="rss-feed_24" transform="translate(1.000000, 1.000000)" fill="#000000">
+            <circle id="Oval" cx="3" cy="19" r="3"></circle>
+            <path d="M2,8 L2,12 C6.411,12 10,15.589 10,20 L14,20 C14,13.373 8.627,8 2,8 Z" id="Path"></path>
+            <path d="M2,0 L2,4 C10.822,4 18,11.178 18,20 L22,20 C22,8.954 13.046,0 2,0 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>
