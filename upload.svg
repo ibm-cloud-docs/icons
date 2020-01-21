@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>icon/formatting/edit/20 copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3.75,10.625 L4.63125,11.50625 L9.375,6.76875 L9.375,18.75 L10.625,18.75 L10.625,6.76875 L15.36875,11.50625 L16.25,10.625 L10,4.375 L3.75,10.625 L3.75,10.625 Z M3.75,5 L3.75,2.5 L16.25,2.5 L16.25,5 L17.5,5 L17.5,2.5 L17.5,2.5 C17.5,1.80964406 16.9403559,1.25 16.25,1.25 L3.75,1.25 C3.05964406,1.25 2.5,1.80964406 2.5,2.5 L2.5,2.5 L2.5,5 L3.75,5 Z" id="path-1"></path>
+    </defs>
+    <g id="Cloud-Shell-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/file/upload/20" transform="translate(-2.000000, -1.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="icon-color" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
