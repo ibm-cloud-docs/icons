@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="19px" viewBox="0 0 16 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>icon/action/restart/20</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15.625,11.25 C15.625,14.7017797 12.8267797,17.5 9.375,17.5 C5.92322031,17.5 3.125,14.7017797 3.125,11.25 C3.125,7.79822031 5.92322031,5 9.375,5 L13.2375,5 L11,7.24375 L11.875,8.125 L15.625,4.375 L11.875,0.625 L11,1.50625 L13.24375,3.75 L9.375,3.75 C5.23286438,3.75 1.875,7.10786438 1.875,11.25 C1.875,15.3921356 5.23286438,18.75 9.375,18.75 C13.5171356,18.75 16.875,15.3921356 16.875,11.25 L15.625,11.25 Z" id="path-1"></path>
+    </defs>
+    <g id="Cloud-Shell-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/action/restart/20" transform="translate(-1.000000, 0.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="icon-color" fill="#161616" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
