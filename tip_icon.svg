@@ -5,7 +5,7 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="tip_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="checklist_32" fill="#000000" fill-rule="nonzero">
+        <g id="checklist_32" fill="#161616" fill-rule="nonzero">
             <path d="M0,0 L0,20 L6,26 L26,26 L26,0 L0,0 Z M24,24 L7,24 L7,19 L2,19 L2,2 L24,2 L24,24 Z" id="Shape"></path>
             <polygon id="Shape" points="19.707 9.707 18.293 8.293 11 15.586 7.707 12.293 6.293 13.707 11 18.414"></polygon>
         </g>
