@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg height="32px" version="1.1" viewBox="0 0 220 32" width="220px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Deploy to IBM Cloud</title>
+    <title>Configure and deploy</title>
     <defs>
         <filter id="filter-1">
             <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
@@ -13,7 +13,7 @@
                 <g id="utilities-/-spacer-/-component-/-horizontal-/-spacing-10-(64px)-/-off" transform="translate(142.000000, 0.000000)">
                     <rect height="32" id="spacer" width="64" x="0" y="0"/>
                 </g>
-                <text fill="#FFFFFF" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" id="Label" letter-spacing="0.159999996" line-spacing="18"> <tspan x="16" y="21">Deploy to IBM Cloud</tspan> </text>
+                <text fill="#FFFFFF" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" id="Label" letter-spacing="0.159999996" line-spacing="18"> <tspan x="16" y="21">Configure and deploy</tspan> </text>
             </g>
             <g fill="#FFFFFF" fill-rule="evenodd" filter="url(#filter-1)" id="Brand-/-IBM-/-ibm-cloud-/-16">
 				<g transform="translate(174.000000, 8.000000)">
