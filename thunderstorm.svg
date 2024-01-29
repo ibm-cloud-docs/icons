@@ -1,1 +1,16 @@
-<svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}</style></defs><title>cloud--lightning</title><path d="M23.5,22H23V20h.5a4.5,4.5,0,0,0,.36-9L23,11l-.1-.82a7,7,0,0,0-13.88,0L9,11,8.14,11a4.5,4.5,0,0,0,.36,9H9v2H8.5A6.5,6.5,0,0,1,7.2,9.14a9,9,0,0,1,17.6,0A6.5,6.5,0,0,1,23.5,22Z"/><polygon points="15.87 30.5 14.13 29.5 17.28 24 11.28 24 16.13 15.5 17.87 16.5 14.72 22 20.72 22 15.87 30.5"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/></svg>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="20" height="15">
+
+<g transform="matrix(0.01953125 0 0 0.01953125 0 0)">
+	<g transform="matrix(24 0 0 24 128 0)">
+	</g>
+    <path transform="matrix(24 0 0 24 128 0)"  d="M23.5 22L23 22L23 20L23.5 20C 25.98528 20.09941 28.08059 18.16528 28.18 15.68C 28.27941 13.19472 26.34528 11.09941 23.86 11L23.86 11L23 11L22.9 10.18C 22.44109 6.697621 19.47248 4.094549 15.96 4.094549C 12.44751 4.094549 9.478905 6.697621 9.02 10.18L9.02 10.18L9 11L8.14 11C 5.654718 11.09941 3.720589 13.19472 3.82 15.68C 3.919411 18.16528 6.014718 20.09941 8.5 20L8.5 20L9 20L9 22L8.5 22C 5.179111 21.97896 2.40814 19.45799 2.074131 16.15387C 1.740122 12.84976 3.950507 9.825226 7.2 9.14C 8.089614 4.990857 11.75656 2.026799 16 2.026799C 20.24344 2.026799 23.91039 4.990857 24.8 9.14C 28.04949 9.825226 30.25988 12.84976 29.92587 16.15387C 29.59186 19.45799 26.82089 21.97896 23.5 22z" stroke="none" fill="#000000" fill-rule="nonzero" />
+	<g transform="matrix(24 0 0 24 128 0)">
+	</g>
+    <path transform="matrix(24 0 0 24 128 0)"  d="M15.87 30.5L14.13 29.5L17.28 24L11.28 24L16.13 15.5L17.87 16.5L14.72 22L20.72 22L15.87 30.5" stroke="none" fill="#000000" fill-rule="nonzero" />
+	<g transform="matrix(24 0 0 24 128 0)">
+	</g>
+    <path transform="matrix(24 0 0 24 128 0)"  d="M0 0L32 0L32 32L0 32L0 0z" stroke="none" fill="none" />
+</g>
+</svg>
